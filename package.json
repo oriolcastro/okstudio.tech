@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "okstudio.tech",
+  "description": "Website for Ok! Studio",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Oriol Castro <hola@okstudio.tech>",
   "dependencies": {
     "bloomer": "^0.6.3",
     "bulma": "^0.7.1",
@@ -13,9 +13,7 @@
     "gatsby-source-datocms": "^1.1.7",
     "react-helmet": "^5.2.0"
   },
-  "keywords": [
-    "gatsby"
-  ],
+  "keywords": ["gatsby"],
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",

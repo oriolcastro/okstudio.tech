@@ -1,3 +1,5 @@
+const config = require('./meta/config')
+
 require('dotenv').config()
 
 module.exports = {
