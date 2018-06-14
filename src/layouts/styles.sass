@@ -1,12 +1,78 @@
 @import "~bulma/sass/utilities/initial-variables";
 @import "~bulma/sass/utilities/functions";
 
-// Define the initial variables
 
+// Define the initial variables
+$okstudio: #007FFF;
+$okstudio-invert: findColorInvert($okstudio);
+$family-serif: "Open Sans", "Segoe UI", Arial, sans-serif;
 
 //Set derived variables
+$primary: $okstudio;
+$primary-invert: $okstudio-invert;
 
+$family-primary: $family-serif
+
+//Customize Bulma variables
+$navbar-item-color: white;
+$navbar-height: 3.5rem;
+$navbar-item-img-max-height: 3.5rem;
 
 @import "~bulma"
 
 //Custom CSS
+.my-site
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+.my-site-content
+  flex: 1;
+  margin-top: -88px;
+.my-navbar
+    background-color: transparent
+    padding-top: 12px
+    padding-left: 24px
+    padding-right: 24px
+    @media screen and (max-width: 1087px)
+      background-color: $primary
+      padding-top: 12px
+      padding-left: 0
+      padding-right: 0
+.navbar-menu
+  @media screen and (max-width: 1087px)
+      background-color: $primary
+      position: absolute
+      width: 100%
+.navbar-burger
+  color: white
+.menu-item
+  font-size: 1.5rem
+  font-weight: bolder
+  line-height: 2.5
+  text-transform: uppercase
+  @media screen and (max-width: 1087px)
+    font-size: 1.25rem
+    line-height: 1.75
+.btn-header
+  text-transform: uppercase
+  font-size: 1.15rem
+  //font-weight: bolder
+.my-hero
+  background: linear-gradient(120deg, #2c3e50, #3498db)
+  //background: linear-gradient(to left, #00d2ff, #3a7bd5)
+  //background: linear-gradient(to bottom, #0052d4, #4364f7, #6fb1fc)
+  // background: linear-gradient(180deg, rgba(0,127,255,1) 10%, rgba(255,255,255,1) 200%)
+  @media screen and (max-width: 1087px)
+    padding-top: 58px
+.hero-img
+  background-image: url(../img/services-hero.jpg)
+  background-position: center center
+  background-attachment: fixed
+  background-color: #fff
+.footer
+  padding-bottom: 48px
+  background-color: $light
+.copyright-wrap
+  padding: 12px 24px
+  background-color: $grey-dark
+  color: findColorInvert($grey-dark)

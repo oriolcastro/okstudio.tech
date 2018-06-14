@@ -1,14 +1,21 @@
 const config = require('./meta/config')
-
 require('dotenv').config()
 
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: config.siteTitle,
+    siteUrl: config.siteUrl,
   },
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
+    'gatsby-transformer-remark',
+    `gatsby-plugin-sharp`,
+    'gatsby-plugin-react-next',
+    'gatsby-plugin-catch-links',
+    {
+      resolve: `gatsby-plugin-sitemap`,
+    },
     {
       resolve: `gatsby-source-datocms`,
       options: {
@@ -17,5 +24,7 @@ module.exports = {
         disableLiveReload: true,
       },
     },
+    'gatsby-plugin-offline',
+    'gatsby-plugin-netlify',
   ],
 }

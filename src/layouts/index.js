@@ -3,10 +3,13 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
 import Header from '../components/header'
+import AppFooter from '../components/footer'
+import Copyright from '../components/copyright'
+
 import './styles.sass'
 
 const Layout = ({ children, data }) => (
-  <div>
+  <div className="my-site">
     <Helmet
       title="Ok! studio"
       meta={[
@@ -14,17 +17,11 @@ const Layout = ({ children, data }) => (
         { name: 'keywords', content: 'sample, something' },
       ]}
     />
-    <Header siteTitle="Ok! studio" />
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '0px 1.0875rem 1.45rem',
-        paddingTop: 0,
-      }}
-    >
-      {children()}
-    </div>
+    <Header />
+
+    <div className="my-site-content">{children()}</div>
+    <AppFooter />
+    <Copyright />
   </div>
 )
 
