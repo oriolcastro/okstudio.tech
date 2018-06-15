@@ -8,7 +8,7 @@ import { Title, Subtitle, Hero, HeroBody, Container } from 'bloomer'
 const HomeHero = props => {
   return (
     <div>
-      <Hero isColor="primary" isSize="large" className="my-hero">
+      <Hero isColor="primary" isSize="large" className="home-hero">
         <HeroBody>
           <Container>
             <Title>{props.title}</Title>

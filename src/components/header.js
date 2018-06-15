@@ -50,9 +50,11 @@ class Header extends Component {
               <img src={logo} />
             </NavbarItem>
           </Link>
-          <NavbarItem isHidden="desktop" className="menu-item">
-            Ok! Studio
-          </NavbarItem>
+          <Link to="/">
+            <NavbarItem isHidden="desktop" className="menu-item">
+              Ok! Studio
+            </NavbarItem>
+          </Link>
           <NavbarBurger
             isActive={this.state.navOpen}
             onClick={this.onClickNav}

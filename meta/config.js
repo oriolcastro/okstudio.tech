@@ -6,5 +6,7 @@ module.exports = {
   pathPrefix: '/', // Prefixes all links. For cases when deployed to example.github.io/gatsby-starter-business/.
   siteDescription: '', // Website description used for RSS feeds/meta description tag.
   copyright: '', // Copyright string for the footer of the website and RSS feed.
+  themeColor: '#007FFF',
+  displayMode: 'minimal-ui',
   googleanalytics: '', //Google Analytics tracker
 }

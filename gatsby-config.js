@@ -24,6 +24,17 @@ module.exports = {
         disableLiveReload: true,
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: config.siteTitle,
+        short_name: config.siteTitle,
+        start_url: config.siteUrl,
+        background_color: '#fff',
+        theme_color: config.themeColor,
+        display: config.displayMode,
+      },
+    },
     'gatsby-plugin-offline',
     'gatsby-plugin-netlify',
   ],
