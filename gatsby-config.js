@@ -10,8 +10,7 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
     'gatsby-transformer-remark',
-    `gatsby-plugin-sharp`,
-    'gatsby-plugin-react-next',
+    'gatsby-plugin-sharp',
     'gatsby-plugin-catch-links',
     {
       resolve: `gatsby-plugin-sitemap`,
