@@ -1,14 +1,15 @@
 import React from 'react'
-import Link from 'gatsby-link'
+// import { Link } from 'gatsby'
+import Layout from '../components/layout'
 
-import { Box, Section, Container } from 'bloomer'
+import { Section, Container } from 'bloomer'
 
 import PageHero from '../components/pagehero'
 import Service from '../components/service'
 import CTABanner from '../components/ctabanner'
 
 const ServeisPage = () => (
-  <div>
+  <Layout>
     <PageHero
       title="adipiscing commodo"
       subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
@@ -40,7 +41,7 @@ const ServeisPage = () => (
       buttonText="Descobreix el nostre mètode"
       buttonLink="/metode"
     />
-  </div>
+  </Layout>
 )
 
 export default ServeisPage

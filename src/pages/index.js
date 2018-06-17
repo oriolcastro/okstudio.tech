@@ -1,12 +1,13 @@
 import React from 'react'
-import Link from 'gatsby-link'
+// import { Link } from 'gatsby'
+import Layout from '../components/layout'
 
 import HomeHero from '../components/homehero'
 
 const IndexPage = () => (
-  <div>
+  <Layout>
     <HomeHero title="Hi" />
-  </div>
+  </Layout>
 )
 
 export default IndexPage

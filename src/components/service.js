@@ -1,7 +1,6 @@
 import React from 'react'
 import propTypes from 'prop-types'
 
-import Img from 'gatsby-image'
 import Link from 'gatsby-link'
 
 import { Container, Columns, Column, Title, Button, Content } from 'bloomer'
@@ -12,7 +11,7 @@ const Service = props => {
       <Title>{props.title}</Title>
       <Columns>
         <Column isSize="1/3">
-          <img src={props.img} />
+          <img alt="" src={props.img} />
         </Column>
         <Column>
           <Container>
@@ -48,8 +47,8 @@ const Service = props => {
       </Columns>
     </div>
   )
-
-  Services.propTypes = {
+  // eslint-disable-next-line
+  Service.propTypes = {
     title: propTypes.string,
     valueprop: propTypes.string,
     img: propTypes.string,

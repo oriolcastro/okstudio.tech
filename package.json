@@ -6,20 +6,21 @@
   "dependencies": {
     "bloomer": "^0.6.3",
     "bulma": "^0.7.1",
-    "gatsby": "^1.9.270",
-    "gatsby-image": "^1.0.52",
-    "gatsby-link": "^1.6.44",
-    "gatsby-plugin-catch-links": "^1.0.22",
-    "gatsby-plugin-manifest": "^1.0.26",
-    "gatsby-plugin-netlify": "^1.0.21",
-    "gatsby-plugin-offline": "^1.0.18",
-    "gatsby-plugin-react-helmet": "^2.0.11",
-    "gatsby-plugin-react-next": "^1.0.11",
-    "gatsby-plugin-sass": "^1.0.26",
-    "gatsby-plugin-sharp": "^1.6.47",
-    "gatsby-plugin-sitemap": "^1.2.25",
+    "gatsby": "next",
+    "gatsby-image": "next",
+    "gatsby-plugin-catch-links": "next",
+    "gatsby-plugin-manifest": "next",
+    "gatsby-plugin-netlify": "next",
+    "gatsby-plugin-offline": "next",
+    "gatsby-plugin-react-helmet": "next",
+    "gatsby-plugin-sass": "next",
+    "gatsby-plugin-sharp": "next",
+    "gatsby-plugin-sitemap": "next",
     "gatsby-source-datocms": "^1.1.8",
-    "gatsby-transformer-remark": "^1.7.42",
+    "gatsby-transformer-remark": "next",
+    "node-sass": "^4.9.0",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
     "react-helmet": "^5.2.0",
     "react-icons": "^2.2.7"
   },
@@ -36,5 +37,7 @@
   "devDependencies": {
     "dotenv": "^6.0.0",
     "prettier": "^1.13.5"
-  }
+  },
+  "main": "index.js",
+  "repository": "https://github.com/oriolcastro/okstudio.tech.git"
 }

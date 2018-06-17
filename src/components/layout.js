@@ -6,7 +6,7 @@ import Header from '../components/header'
 import AppFooter from '../components/footer'
 import Copyright from '../components/copyright'
 
-import './styles.sass'
+import '../layouts/styles.sass'
 
 const Layout = ({ children, data }) => (
   <div className="my-site">
@@ -19,7 +19,7 @@ const Layout = ({ children, data }) => (
     />
     <Header />
 
-    <div className="my-site-content">{children()}</div>
+    <div className="my-site-content">{children}</div>
     <AppFooter />
     <Copyright />
   </div>
