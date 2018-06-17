@@ -6,7 +6,7 @@ import HomeHero from '../components/homehero'
 
 const IndexPage = () => (
   <Layout>
-    <HomeHero title="Hi" />
+    <HomeHero title="We are Ok! studio" />
   </Layout>
 )
 
