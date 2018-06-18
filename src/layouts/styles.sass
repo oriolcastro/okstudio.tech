@@ -99,6 +99,57 @@ $navbar-item-img-max-height: 3.5rem;
   margin-bottom: 24px
 
 
+//Customize the projects page masonry
+.projects-grid
+  display: -webkit-box /* Not needed if autoprefixing */
+  display: -ms-flexbox /* Not needed if autoprefixing */
+  display: flex
+  margin-left: -30px /* gutter size offset */
+  width: auto
+.projects-grid_column
+  padding-left: 30px /* gutter size */
+  background-clip: padding-box
+
+.projectsgrid_element-container
+  position: relative
+  z-index: 1
+  overflow: hidden
+  margin-bottom: 30px
+  &:hover
+    img
+      transform: scale(1.2, 1.2)
+      transition: all 1s ease-in-out
+    .projectsgrid_element-text
+      bottom: 35%
+    .projectsgrid_element-icon
+      opacity: 1
+.projectsgrid_element-text
+  transition: all 0.5s ease-in-out
+  position: absolute
+  z-index: 50
+  bottom: 0
+  background-color: rgba(250,250,250,0.8)
+  padding: 12px
+  h1
+    text-align: center
+    transition: all 0.5s ease-in-out
+
+  h2
+    transition: all 0.5s ease-in-out
+
+.projectsgrid_element-icon
+  display: inline
+  position: absolute
+  bottom: 2rem
+  right: 0
+  margin: 24px
+  font-size: 24px
+  color: $grey-darker
+  opacity: 0
+  transition: all 0.5s ease-in-out
+
+
+
 //Customize the banner
 .cta-banner
   background-color: $danger
