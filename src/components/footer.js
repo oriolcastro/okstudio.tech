@@ -11,8 +11,8 @@ const AppFooter = () => (
     <Footer id="footer">
       <Container>
         <Content>
-          <Columns>
-            <Column isSize="1/4">
+          <Columns isMobile isMultiline>
+            <Column className="is-3-desktop is-6-tablet is-12-mobile">
               <img alt="" src={logotype} className="logotype" />
               <Content className="adress-container">
                 <p>C/ Sant Onofre 93 bxs</p>
@@ -21,7 +21,7 @@ const AppFooter = () => (
               </Content>
               <p>hola@okstudio.tech</p>
             </Column>
-            <Column isSize="1/4">
+            <Column className="is-3-desktop is-6-tablet">
               <Title isSize="5">Que fem</Title>
               <Link to="/serveis">
                 <p>Consultoria tecnològica</p>
@@ -48,7 +48,7 @@ const AppFooter = () => (
                 <p>Coneix el nostre mètode</p>
               </Link>
             </Column>
-            <Column isSize="1/4">
+            <Column className="is-3-desktop is-6-tablet">
               <Content>
                 <Title isSize="5">Projectes</Title>
                 <Link to="/projectes">
@@ -70,13 +70,13 @@ const AppFooter = () => (
                 <Title isSize="5">Contacte</Title>
               </Link>
             </Column>
-            <Column isSize="1/4">
+            <Column className="is-3-desktop is-6-tablet is-12-mobile">
               <Title isSize="5">Xarxes</Title>
               <div>
                 <a
                   href="https://twitter.com/_okstudio"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                 >
                   <span className="my-icon-container">
                     <FaTwitter size={32} />
@@ -85,7 +85,7 @@ const AppFooter = () => (
                 <a
                   href="https://www.instagram.com/_okstudio/"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                 >
                   <span className="my-icon-container">
                     <FaInstagram size={32} />
@@ -94,7 +94,7 @@ const AppFooter = () => (
                 <a
                   href="https://github.com/oriolcastro"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                 >
                   <span className="my-icon-container">
                     <FaGithub size={32} />
