@@ -16,6 +16,13 @@ module.exports = {
       resolve: `gatsby-plugin-sitemap`,
     },
     {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: process.env.MY_CONTENTFUL_SPACE_ID || '',
+        accessToken: process.env.MY_CONTENTFUL_ACCES_TOKEN || '',
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: config.siteTitle,
