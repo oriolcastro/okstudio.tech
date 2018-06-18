@@ -16,14 +16,6 @@ module.exports = {
       resolve: `gatsby-plugin-sitemap`,
     },
     {
-      resolve: `gatsby-source-datocms`,
-      options: {
-        apiToken: process.env.MY_READONLY_DATOCMS_API_TOKEN || '',
-        previewMode: false,
-        disableLiveReload: false,
-      },
-    },
-    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: config.siteTitle,
