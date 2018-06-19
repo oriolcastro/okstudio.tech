@@ -5,11 +5,19 @@
 // Define the initial variables
 $okstudio: #007FFF;
 $okstudio-invert: findColorInvert($okstudio);
+$green-okstudio: #44AF69;
+$red-okstudio: #FB3640;
+$yellow-okstudio: #F7B538;
+$purple-okstudio: #3D315B;
 $family-serif: "Open Sans", "Segoe UI", Arial, sans-serif;
 
 //Set derived variables
 $primary: $okstudio;
 $primary-invert: $okstudio-invert;
+$danger: $red-okstudio;
+$danger-invert: findColorInvert($danger);
+$success: $green-okstudio;
+$sucess-invert: findColorInvert($success);
 
 $family-primary: $family-serif
 
@@ -98,16 +106,30 @@ $navbar-item-img-max-height: 3.5rem;
 .service
   margin-bottom: 24px
 
+//Customize the hero section for single-project and single-blog pages
+.single-hero
+  position: relative
+  z-index: 1
+.single-hero__text
+  position: absolute
+  width: 100%
+  z-index: 50
+  bottom: 0
+  padding: 24px
+  margin: 0 48px
+  h1
+    color: $white
+  h2
+    color: $white
+
 
 //Customize the projects page masonry
 .projects-grid
-  display: -webkit-box /* Not needed if autoprefixing */
-  display: -ms-flexbox /* Not needed if autoprefixing */
   display: flex
-  margin-left: -30px /* gutter size offset */
+  margin-left: -30px
   width: auto
 .projects-grid_column
-  padding-left: 30px /* gutter size */
+  padding-left: 30px
   background-clip: padding-box
 
 .projectsgrid_element-container
@@ -121,6 +143,7 @@ $navbar-item-img-max-height: 3.5rem;
       transition: all 1s ease-in-out
     .projectsgrid_element-text
       bottom: 35%
+      background-color: rgba(0,127,255,0.5)
     .projectsgrid_element-icon
       opacity: 1
 .projectsgrid_element-text
@@ -128,14 +151,16 @@ $navbar-item-img-max-height: 3.5rem;
   position: absolute
   z-index: 50
   bottom: 0
-  background-color: rgba(250,250,250,0.8)
+  background-color: rgba(0,127,255,0.75)
   padding: 12px
   h1
     text-align: center
     transition: all 0.5s ease-in-out
+    color: $white
 
   h2
     transition: all 0.5s ease-in-out
+    color: $white
 
 .projectsgrid_element-icon
   display: inline
@@ -150,6 +175,7 @@ $navbar-item-img-max-height: 3.5rem;
 
 
 
+
 //Customize the banner
 .cta-banner
   background-color: $danger
@@ -159,6 +185,12 @@ $navbar-item-img-max-height: 3.5rem;
     text-align: center
   .cta-button
     text-align: center
+
+//Customize the client opinion cta-banner
+.client-opinion-banner
+  background-color: $success
+  p, h1,h5, h6
+    color: $sucess-invert
 
 // Customize the footer
 .footer
