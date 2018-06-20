@@ -1,44 +1,18 @@
-@import "~bulma/sass/utilities/initial-variables";
-@import "~bulma/sass/utilities/functions";
-
-
-// Define the initial variables
-$okstudio: #007FFF;
-$okstudio-invert: findColorInvert($okstudio);
-$green-okstudio: #44AF69;
-$red-okstudio: #FB3640;
-$yellow-okstudio: #F7B538;
-$purple-okstudio: #3D315B;
-$family-serif: "Open Sans", "Segoe UI", Arial, sans-serif;
-
-//Set derived variables
-$primary: $okstudio;
-$primary-invert: $okstudio-invert;
-$danger: $red-okstudio;
-$danger-invert: findColorInvert($danger);
-$success: $green-okstudio;
-$sucess-invert: findColorInvert($success);
-
-$family-primary: $family-serif
-
-//Customize Bulma variables
-$navbar-item-color: white;
-$navbar-height: 3.5rem;
-$navbar-item-img-max-height: 3.5rem;
+@import "./theme.sass"
 
 @import "~bulma"
 
-//Custom CSS
+//Main custom CSS
 .my-site
   display: flex;
   min-height: 100vh;
   flex-direction: column;
 .my-site-content
   flex: 1;
-  margin-top: -88px;
+  margin-top: -88px
 
 
-// Customize the header and navbar
+//Customize header Section
 .my-navbar
     background-color: transparent
     padding-top: 12px
@@ -98,13 +72,16 @@ $navbar-item-img-max-height: 3.5rem;
 
 
 //Customize the service component
-.column-no-padding
+.add-padding-lat
   padding: 0px 12px
+.serveis_cta-container
+  padding: 12px
 .button-wrapper
   display: inline-flex
   margin: 8px
 .service
-  margin-bottom: 24px
+  margin-bottom: 48px
+
 
 //Customize the hero section for single-project and single-blog pages
 .single-hero
@@ -138,21 +115,20 @@ $navbar-item-img-max-height: 3.5rem;
   overflow: hidden
   margin-bottom: 30px
   &:hover
-    img
-      transform: scale(1.2, 1.2)
-      transition: all 1s ease-in-out
     .projectsgrid_element-text
       bottom: 35%
-      background-color: rgba(0,127,255,0.5)
+      background-color: rgba(0,127,255,0.6)
     .projectsgrid_element-icon
       opacity: 1
+
 .projectsgrid_element-text
   transition: all 0.5s ease-in-out
   position: absolute
   z-index: 50
   bottom: 0
-  background-color: rgba(0,127,255,0.75)
+  background-color: rgba(0,127,255,0.8)
   padding: 12px
+  width: 100%
   h1
     text-align: center
     transition: all 0.5s ease-in-out
@@ -165,23 +141,21 @@ $navbar-item-img-max-height: 3.5rem;
 .projectsgrid_element-icon
   display: inline
   position: absolute
-  bottom: 2rem
+  bottom: 1rem
   right: 0
   margin: 24px
   font-size: 24px
-  color: $grey-darker
+  color: $white
   opacity: 0
   transition: all 0.5s ease-in-out
 
 
-
-
 //Customize the banner
 .cta-banner
-  background-color: $danger
+  background-color: $primary
   padding: 48px 24px
   h1
-    color: $white
+    color: $primary-invert
     text-align: center
   .cta-button
     text-align: center
@@ -190,7 +164,7 @@ $navbar-item-img-max-height: 3.5rem;
 .client-opinion-banner
   background-color: $success
   p, h1,h5, h6
-    color: $sucess-invert
+    color: $success-invert
 
 // Customize the footer
 .footer
@@ -210,3 +184,6 @@ $navbar-item-img-max-height: 3.5rem;
   padding: 12px 24px
   background-color: $grey-dark
   color: findColorInvert($grey-dark)
+  a
+    color: findColorInvert($grey-dark)
+    text-align: right

@@ -9,8 +9,8 @@ const ClientOpinionBanner = props => {
     <Section className="client-opinion-banner">
       <Container>
         <Columns>
-          <Column isSize="1/3">
-            <Img fixed={props.img} />
+          <Column isSize="1/4">
+            <Img fluid={props.img} />
           </Column>
           <Column>
             <Title>L'opinió del client</Title>

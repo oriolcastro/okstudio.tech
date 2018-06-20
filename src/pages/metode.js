@@ -7,8 +7,8 @@ import PageHero from '../components/pagehero'
 const MetodePage = () => (
   <Layout>
     <PageHero
-      title="adipiscing commodo"
-      subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+      title="Democratitzem l'accés a les noves tecnologies"
+      subtitle="El nostre objectiu és ajudar-vos a adoptar el canvi tecnològic en l'arrel de la teva organització"
     />
   </Layout>
 )

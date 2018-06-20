@@ -8,32 +8,26 @@ import PageHero from '../components/pagehero'
 import Service from '../components/service'
 import CTABanner from '../components/ctabanner'
 
-const ServeisPage = () => (
+const ServeisPage = ({ data }) => (
   <Layout>
     <PageHero
-      title="adipiscing commodo"
-      subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+      title="Descobriex que podem fer per tu"
+      subtitle="Sigui quina sigui la teva necessitat estem aquí per acompanyar-te en el camí"
     />
     <Section>
       <Container>
-        <Service
-          title="Servei 1"
-          valueprop="Ho fem molt bé i ens has de contractar"
-          img="https://picsum.photos/400/300/?gravity=center"
-          CTAexamplelink="/"
-        />
-        <Service
-          title="Servei 1"
-          valueprop="Ho fem molt bé i ens has de contractar"
-          img="https://picsum.photos/400/300/?gravity=center"
-          CTAexamplelink="/"
-        />
-        <Service
-          title="Servei 1"
-          valueprop="Ho fem molt bé i ens has de contractar"
-          img="https://picsum.photos/400/300/?gravity=center"
-          CTAexamplelink="/"
-        />
+        {data.allContentfulService.edges.map(({ node }, i) => (
+          <Service
+            key={node.i}
+            title={node.title}
+            valueprop={node.valueProp}
+            img={node.icon.fluid}
+            examples={node.exampleServices}
+            exampleBtnLink={node.exampleBtnLink}
+            exampleBtnText={node.exampleBtnText}
+            serviceColor={node.serviceColor}
+          />
+        ))}
       </Container>
     </Section>
     <CTABanner
@@ -45,3 +39,25 @@ const ServeisPage = () => (
 )
 
 export default ServeisPage
+
+export const query = graphql`
+  query ServeisPageQuery {
+    allContentfulService {
+      edges {
+        node {
+          title
+          icon {
+            fluid(maxWidth: 400, maxHeight: 400) {
+              ...GatsbyContentfulFluid
+            }
+          }
+          valueProp
+          exampleServices
+          exampleBtnText
+          exampleBtnLink
+          serviceColor
+        }
+      }
+    }
+  }
+`

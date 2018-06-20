@@ -27,7 +27,7 @@ const AppFooter = () => (
                 <p>Consultoria tecnològica</p>
               </Link>
               <Link to="/serveis">
-                <p>Transoformació digital</p>
+                <p>Transformació digital</p>
               </Link>
               <Link to="/serveis">
                 <p>Optimització de processos</p>
@@ -39,7 +39,7 @@ const AppFooter = () => (
                 <p>Creació pàgines web</p>
               </Link>
               <Link to="/serveis">
-                <p>Aplicacions web mobil</p>
+                <p>Aplicacions web mòbil</p>
               </Link>
               <Title isSize="5" hasTextColor="$grey-dark">
                 Com treballem

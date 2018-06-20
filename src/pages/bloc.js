@@ -7,8 +7,8 @@ import PageHero from '../components/pagehero'
 const BlocPage = () => (
   <Layout>
     <PageHero
-      title="adipiscing commodo"
-      subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+      title="Compartim el coneixement"
+      subtitle="Som un projecte connectat al món tecnològic i amb inquietud per estar al dia de què es cou"
     />
   </Layout>
 )

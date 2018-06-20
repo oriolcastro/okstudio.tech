@@ -14,14 +14,14 @@ const SingleProject = ({ data }) => {
       <SingleHero
         img={data.contentfulProject.heroImg.fluid}
         title={data.contentfulProject.title}
-        subtitle="Desenvolupament web"
+        category={data.contentfulProject.category}
       />
 
       <Section>
         <Container>
-          <Columns>
-            <Column isSize="1/3">
-              <Img fixed={data.contentfulProject.clientLogo.fixed} />
+          <Columns isCentered>
+            <Column isSize="1/4">
+              <Img fluid={data.contentfulProject.clientLogo.fluid} />
             </Column>
             <Column>
               <Content>
@@ -82,7 +82,7 @@ const SingleProject = ({ data }) => {
         </Container>
       </Section>
       <ClientOpinionBanner
-        img={data.contentfulProject.clientLogo.fixed}
+        img={data.contentfulProject.clientLogo.fluid}
         content={data.contentfulProject.clientOpinion.childMarkdownRemark.html}
       />
       <CTABanner
@@ -98,14 +98,15 @@ export const query = graphql`
   query ProjectQuery($slug: String!) {
     contentfulProject(slug: { eq: $slug }) {
       title
+      category
       heroImg {
         fluid(maxHeight: 400, maxWidth: 1400) {
           ...GatsbyContentfulFluid
         }
       }
       clientLogo {
-        fixed(width: 300, height: 200) {
-          ...GatsbyContentfulFixed
+        fluid(maxWidth: 200, maxHeight: 200) {
+          ...GatsbyContentfulFluid
         }
       }
       clientDescription {

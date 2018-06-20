@@ -7,8 +7,8 @@ import PageHero from '../components/pagehero'
 const ContactePage = () => (
   <Layout>
     <PageHero
-      title="adipiscing commodo"
-      subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+      title="Estem aquí per ajudar-te"
+      subtitle="Contacta'ns i explica'ns quina necessitat tens, segur que trobarem la forma de treballar plegats"
     />
   </Layout>
 )

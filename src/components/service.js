@@ -1,48 +1,43 @@
 import React from 'react'
 import propTypes from 'prop-types'
+import Img from 'gatsby-image'
+import { Link } from 'gatsby'
 
-import Link from 'gatsby-link'
-
-import { Container, Columns, Column, Title, Button, Content } from 'bloomer'
+import { Columns, Column, Title, Button, Content } from 'bloomer'
 
 const Service = props => {
   return (
     <div className="service">
       <Title>{props.title}</Title>
       <Columns>
-        <Column isSize="1/3">
-          <img alt="" src={props.img} />
+        <Column isSize="1/4">
+          <Img fluid={props.img} />
         </Column>
-        <Column>
-          <Container>
-            <Column isSize="1/2" className="column-no-padding">
-              <Content>
-                <h4>{props.valueprop}</h4>
-              </Content>
-            </Column>
-            <Column className="column-no-padding">
-              <Content>
-                <ul>
-                  <li>First example</li>
-                  <li>Second example</li>
-                </ul>
-              </Content>
-            </Column>
-            <Column>
-              <div className="button-wrapper">
-                <Link to={props.CTAexamplelink}>
-                  <Button isColor="primary" isOutlined>
-                    CTA examples
-                  </Button>
-                </Link>
-              </div>
-              <div className="button-wrapper">
-                <Link to="/contacte">
-                  <Button isColor="primary">CTA contact</Button>
-                </Link>
-              </div>
-            </Column>
-          </Container>
+        <Column isSize="3/4">
+          <div className="add-padding-lat">
+            <Content className="has-text-justified">
+              <p>{props.valueprop}</p>
+            </Content>
+          </div>
+          <div className="add-padding-lat">
+            <Content>
+              <ul>{props.examples.map((e, i) => <li key={i}>{e}</li>)}</ul>
+            </Content>
+          </div>
+          <div className="serveis_cta-container">
+            <div className="button-wrapper">
+              <Link to={props.exampleBtnLink}>
+                <Button isColor={props.serviceColor} isOutlined>
+                  {props.exampleBtnText}
+                </Button>
+              </Link>
+            </div>
+            <div className="button-wrapper">
+              <Link to="/contacte">
+                <Button isColor={props.serviceColor}>Contacta'ns</Button>
+              </Link>
+            </div>
+          </div>
         </Column>
       </Columns>
     </div>
@@ -52,8 +47,10 @@ const Service = props => {
     title: propTypes.string,
     valueprop: propTypes.string,
     img: propTypes.string,
-    examples: propTypes.string,
-    CTAexamplelink: propTypes.string,
+    examples: propTypes.array,
+    exampleBtnLink: propTypes.string,
+    exampleBtnText: propTypes.string,
+    serviceColor: propTypes.string,
   }
 }
 export default Service
