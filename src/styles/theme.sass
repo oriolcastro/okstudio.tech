@@ -1,0 +1,31 @@
+@import "~bulma/sass/utilities/initial-variables";
+@import "~bulma/sass/utilities/functions";
+
+
+// Define the initial variables
+$okstudio: #007FFF;
+$okstudio-invert: findColorInvert($okstudio);
+$green-okstudio: #44AF69;
+$red-okstudio: #FB3640;
+$yellow-okstudio: #F7B538;
+$purple-okstudio: #3D315B;
+$family-serif: "Open Sans", "Segoe UI", Arial, sans-serif;
+
+//Set derived variables
+$primary: $okstudio;
+$primary-invert: $okstudio-invert;
+$danger: $red-okstudio;
+$danger-invert: findColorInvert($danger);
+$success: $green-okstudio;
+$sucess-invert: findColorInvert($success);
+$warning: $yellow-okstudio;
+$warning-invert: findColorInvert($warning);
+$info: $purple-okstudio;
+$info-invert: findColorInvert($info);
+
+$family-primary: $family-serif
+
+//Customize Bulma variables
+$navbar-item-color: white;
+$navbar-height: 3.5rem;
+$navbar-item-img-max-height: 3.5rem;

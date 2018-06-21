@@ -10,18 +10,16 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
     'gatsby-transformer-remark',
-    `gatsby-plugin-sharp`,
-    'gatsby-plugin-react-next',
+    'gatsby-plugin-sharp',
     'gatsby-plugin-catch-links',
     {
       resolve: `gatsby-plugin-sitemap`,
     },
     {
-      resolve: `gatsby-source-datocms`,
+      resolve: `gatsby-source-contentful`,
       options: {
-        apiToken: process.env.MY_READONLY_DATOCMS_API_TOKEN || '',
-        previewMode: true,
-        disableLiveReload: true,
+        spaceId: process.env.MY_CONTENTFUL_SPACE_ID || '',
+        accessToken: process.env.MY_CONTENTFUL_ACCES_TOKEN || '',
       },
     },
     {

@@ -10,9 +10,6 @@ import {
   NavbarStart,
   NavbarEnd,
   Button,
-  Icon,
-  Container,
-  Section,
 } from 'bloomer'
 
 import logo from '../img/brand.png'
@@ -47,7 +44,7 @@ class Header extends Component {
         <NavbarBrand>
           <Link to="/">
             <NavbarItem onClick={this.closeNav}>
-              <img src={logo} />
+              <img alt="" src={logo} />
             </NavbarItem>
           </Link>
           <Link to="/">

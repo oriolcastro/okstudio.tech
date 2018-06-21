@@ -1,15 +1,16 @@
 import React from 'react'
-import Link from 'gatsby-link'
+// import { Link } from 'gatsby'
+import Layout from '../components/layout'
 
 import PageHero from '../components/pagehero'
 
 const MetodePage = () => (
-  <div>
+  <Layout>
     <PageHero
-      title="adipiscing commodo"
-      subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+      title="Democratitzem l'accés a les noves tecnologies"
+      subtitle="El nostre objectiu és ajudar-vos a adoptar el canvi tecnològic en l'arrel de la teva organització"
     />
-  </div>
+  </Layout>
 )
 
 export default MetodePage

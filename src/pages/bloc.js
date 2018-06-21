@@ -1,15 +1,16 @@
 import React from 'react'
-import Link from 'gatsby-link'
+// import { Link } from 'gatsby'
+import Layout from '../components/layout'
 
 import PageHero from '../components/pagehero'
 
 const BlocPage = () => (
-  <div>
+  <Layout>
     <PageHero
-      title="adipiscing commodo"
-      subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+      title="Compartim el coneixement"
+      subtitle="Som un projecte connectat al món tecnològic i amb inquietud per estar al dia de què es cou"
     />
-  </div>
+  </Layout>
 )
 
 export default BlocPage

@@ -1,12 +1,11 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
 import Header from '../components/header'
 import AppFooter from '../components/footer'
 import Copyright from '../components/copyright'
 
-import './styles.sass'
+import '../styles/main.sass'
 
 const Layout = ({ children, data }) => (
   <div className="my-site">
@@ -19,14 +18,10 @@ const Layout = ({ children, data }) => (
     />
     <Header />
 
-    <div className="my-site-content">{children()}</div>
+    <div className="my-site-content">{children}</div>
     <AppFooter />
     <Copyright />
   </div>
 )
-
-Layout.propTypes = {
-  children: PropTypes.func,
-}
 
 export default Layout
