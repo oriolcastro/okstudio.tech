@@ -14,7 +14,7 @@
     "gatsby-plugin-offline": "next",
     "gatsby-plugin-react-helmet": "next",
     "gatsby-plugin-sass": "next",
-    "gatsby-plugin-sharp": "next",
+    "gatsby-plugin-sharp": "^2.0.0-beta.2",
     "gatsby-plugin-sitemap": "next",
     "gatsby-source-contentful": "next",
     "gatsby-source-filesystem": "^1.5.39",

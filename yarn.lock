@@ -4779,6 +4779,24 @@ gatsby-plugin-sass@next:
     "@babel/runtime" "7.0.0-beta.51"
     sass-loader "^7.0.1"
 
+gatsby-plugin-sharp@^2.0.0-beta.2:
+  version "2.0.0-beta.2"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.0.0-beta.2.tgz#ea7e42d1ba7adbeebeeffe3ddafc675d6eb2fc33"
+  dependencies:
+    "@babel/runtime" "7.0.0-beta.51"
+    async "^2.1.2"
+    bluebird "^3.5.0"
+    imagemin "^5.2.2"
+    imagemin-pngquant "^5.1.0"
+    imagemin-webp "^4.0.0"
+    lodash "^4.17.4"
+    mini-svg-data-uri "^1.0.0"
+    potrace "^2.1.1"
+    probe-image-size "^4.0.0"
+    progress "^1.1.8"
+    sharp "^0.20.2"
+    svgo "^0.7.2"
+
 gatsby-plugin-sharp@next:
   version "2.0.0-beta.1"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.0.0-beta.1.tgz#b62701119cbfa51dc96c1d09d1111c2ba5702f56"
