@@ -35,6 +35,39 @@ const CreditsPage = () => (
               <a href="https://thenounproject.com/">the Noun Project</a>
             </li>
           </ul>
+          <Title>Imatges</Title>
+          <ul>
+            <li>
+              "Proximitat" by{' '}
+              <a href="https://unsplash.com/photos/UCZF1sXcejo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+                Štefan Štefančík
+              </a>{' '}
+              on{' '}
+              <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+                Unsplash
+              </a>
+            </li>
+            <li>
+              "Col·laboració" by{' '}
+              <a href="https://unsplash.com/photos/rKJOD7Vs6Ug?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+                raw pixel
+              </a>{' '}
+              on{' '}
+              <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+                Unsplash
+              </a>
+            </li>
+            <li>
+              "Compromís" by{' '}
+              <a href="https://unsplash.com/photos/0gO3-b-5m80?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+                Stefan Cosma
+              </a>{' '}
+              on{' '}
+              <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+                Unsplash
+              </a>
+            </li>
+          </ul>
         </Content>
       </Container>
     </Section>
