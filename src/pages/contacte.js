@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
 
 import {
   Section,
@@ -9,9 +8,7 @@ import {
   Control,
   Input,
   TextArea,
-  Radio,
   Button,
-  Title,
   Columns,
   Column,
   Content,
@@ -35,7 +32,7 @@ const ContactePage = () => (
               name="contactPage"
               method="POST"
               netlify-honeypot="bot-field"
-              netlify
+              data-netlify="true"
             >
               <Field>
                 <Label>Nom i cognoms</Label>
@@ -72,7 +69,7 @@ const ContactePage = () => (
               <Field isGrouped>
                 <Control>
                   <Button type="submit" isColor="primary">
-                    Envia
+                    Enviar
                   </Button>
                 </Control>
               </Field>

@@ -4,7 +4,7 @@ import Layout from '../components/layout'
 
 import PageHero from '../components/pagehero'
 
-const BlocPage = () => (
+const BlogPage = () => (
   <Layout>
     <PageHero
       title="Compartim el coneixement"
@@ -13,4 +13,4 @@ const BlocPage = () => (
   </Layout>
 )
 
-export default BlocPage
+export default BlogPage

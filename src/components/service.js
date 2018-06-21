@@ -34,7 +34,7 @@ const Service = props => {
             </div>
             <div className="button-wrapper">
               <Link to="/contacte">
-                <Button isColor={props.serviceColor}>Contacta'ns</Button>
+                <Button isColor={props.serviceColor}>Contacte</Button>
               </Link>
             </div>
           </div>

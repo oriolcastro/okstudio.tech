@@ -74,14 +74,14 @@ class Header extends Component {
                 <p className="menu-item">mètode</p>
               </NavbarItem>
             </Link>
-            <Link onClick={this.closeNav} to="/bloc">
+            <Link onClick={this.closeNav} to="/blog">
               <NavbarItem>
-                <p className="menu-item">bloc</p>
+                <p className="menu-item">blog</p>
               </NavbarItem>
             </Link>
             <Link onClick={this.closeNav} to="/contacte">
               <NavbarItem isHidden="desktop">
-                <p className="menu-item">contacta'ns</p>
+                <p className="menu-item">contacte</p>
               </NavbarItem>
             </Link>
           </NavbarStart>
@@ -89,7 +89,7 @@ class Header extends Component {
             <NavbarItem>
               <Link to="/contacte">
                 <Button className="btn-header">
-                  <span>contacta'ns</span>
+                  <span>contacte</span>
                 </Button>
               </Link>
             </NavbarItem>

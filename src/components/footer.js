@@ -49,26 +49,22 @@ const AppFooter = () => (
               </Link>
             </Column>
             <Column className="is-3-desktop is-6-tablet">
-              <Content>
-                <Title isSize="5">Projectes</Title>
-                <Link to="/projectes">
-                  <p>Projecte destacat 1</p>
-                </Link>
-                <Link to="/projectes">
-                  <p>Projectes destacat 2</p>
-                </Link>
-                <Link to="/projectes">
-                  <p>Projectes destacat 3</p>
-                </Link>
-              </Content>
-
-              <Link to="/bloc">
-                <Title isSize="5">Bloc</Title>
+              <Title isSize="5">Projectes</Title>
+              <Link to="/projectes">
+                <p>Projecte destacat 1</p>
               </Link>
-
-              <Link to="/contacte">
-                <Title isSize="5">Contacte</Title>
+              <Link to="/projectes">
+                <p>Projectes destacat 2</p>
               </Link>
+              <Link to="/projectes">
+                <p>Projectes destacat 3</p>
+              </Link>
+              <Title isSize="5">
+                <Link to="/blog">Blog</Link>
+              </Title>
+              <Title isSize="5">
+                <Link to="/contacte">Contacte</Link>
+              </Title>
             </Column>
             <Column className="is-3-desktop is-6-tablet is-12-mobile">
               <Title isSize="5">Xarxes</Title>

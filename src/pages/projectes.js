@@ -13,7 +13,7 @@ const ProjectesPage = ({ data }) => {
     <Layout>
       <PageHero
         title="La nostra feina és la millor presentació"
-        subtitle="No existeixen projectes petits o reptes massa ambiciosos"
+        subtitle="Per a nosaltres no existeixen projectes petits ni reptes massa ambiciosos"
       />
       <Section>
         <Container>
@@ -40,7 +40,7 @@ const ProjectesPage = ({ data }) => {
       </Section>
       <CTABanner
         content="T'agrada la nostra feina?"
-        buttonText="Contacta'ns"
+        buttonText="Contacta amb nosaltres"
         buttonLink="/contacte"
       />
     </Layout>

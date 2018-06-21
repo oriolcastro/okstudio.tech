@@ -1,9 +1,8 @@
 import React from 'react'
-// import { Link } from 'gatsby'
-import Layout from '../components/layout'
 
 import { Section, Container } from 'bloomer'
 
+import Layout from '../components/layout'
 import PageHero from '../components/pagehero'
 import Service from '../components/service'
 import CTABanner from '../components/ctabanner'
@@ -31,7 +30,7 @@ const ServeisPage = ({ data }) => (
       </Container>
     </Section>
     <CTABanner
-      content="Coneixes com treballem?"
+      content="Vols saber com ho portem a la pràctica?"
       buttonText="Descobreix el nostre mètode"
       buttonLink="/metode"
     />
