@@ -6,7 +6,7 @@ import { Button, Content } from 'bloomer'
 
 const CTABanner = props => {
   return (
-    <div className="cta-banner">
+    <div className={`cta-banner has-background-${props.backgroundColor}`}>
       <Link to={props.buttonLink}>
         <Content>
           <h1>{props.content}</h1>
