@@ -1,8 +1,16 @@
 import React from 'react'
 import Img from 'gatsby-image'
-// import { Link } from 'gatsby'
+import { graphql } from 'gatsby'
 
-import { Section, Container, Title, Columns, Column, Content } from 'bloomer'
+import {
+  Section,
+  Container,
+  Title,
+  Columns,
+  Column,
+  Content,
+  Box,
+} from 'bloomer'
 
 import Layout from '../components/layout'
 import PageHero from '../components/pagehero'
@@ -86,6 +94,88 @@ const MetodePage = ({ data }) => (
       </Container>
     </Section>
     <CTABanner
+      content={data.contentfulMethodPage.banners[1].content}
+      buttonText={data.contentfulMethodPage.banners[1].btnText}
+      buttonLink={data.contentfulMethodPage.banners[1].btnLink}
+      backgroundColor="success"
+    />
+    <Section className="has-background-primar">
+      <Container>
+        <Title className="has-text-centered">
+          {' '}
+          Tots els projectes segueixen un procés de 4 fases
+        </Title>
+        <Img
+          outerWrapperClassName="image-is-centered"
+          fixed={data.contentfulMethodPage.process.fixed}
+        />
+        <Columns isCentered>
+          <Column isSize="1/4">
+            <Box className="is-full-height">
+              <Content>
+                <div className="has-text-centered is-size-1 has-text-white has-background-danger add-bottom-margin">
+                  1
+                </div>
+                <h4>Estudi</h4>
+                <p className="has-text-justified">
+                  Comprendre les necessitats de l'organització amb qui estem
+                  treballant, les seves dinàmiques i el problema plantejat.
+                  Cercar les diferents solucions tecnològiques existents.
+                </p>
+              </Content>
+            </Box>
+          </Column>
+          <Column isSize="1/4">
+            <Box className="is-full-height">
+              <Content>
+                <div className="has-text-centered is-size-1 has-text-white  has-background-warning add-bottom-margin">
+                  2
+                </div>
+                <h4>Disseny</h4>
+                <p className="has-text-justified">
+                  Crear la primera proposta i definir les accions de manera
+                  compartida. Acordar els objectius del primer cicle
+                  d'implementació del projecte i el calendari de treball.
+                </p>
+              </Content>
+            </Box>
+          </Column>
+          <Column isSize="1/4">
+            <Box className="is-full-height">
+              <Content>
+                <div className="has-text-centered is-size-1 has-text-white has-background-info add-bottom-margin">
+                  3
+                </div>
+                <h4>Desenvolupament</h4>
+                <p className="has-text-justified">
+                  Desenvolupar les accions del primer cicle. Revisar i validar
+                  la feina realitzada per tal de decidir com ha de continuar el
+                  projecte en el nou cicle.
+                </p>
+              </Content>
+            </Box>
+          </Column>
+          <Column isSize="1/4">
+            <Box className="is-full-height">
+              <Content>
+                <div className="has-text-centered is-size-1 has-text-white has-background-success add-bottom-margin">
+                  4
+                </div>
+                <h4>Entrega</h4>
+                <p className="has-text-justified">
+                  Presentar els resultats finals del projecte als grups
+                  d'interès i fer-ne entrega acompanyant la seva posada en marxa
+                  durant el temps acordat. Tancar el projecte amb una valoració
+                  final.
+                </p>
+              </Content>
+            </Box>
+          </Column>
+        </Columns>
+      </Container>
+    </Section>
+
+    <CTABanner
       content={data.contentfulMethodPage.banners[0].content}
       buttonText={data.contentfulMethodPage.banners[0].btnText}
       buttonLink={data.contentfulMethodPage.banners[0].btnLink}
@@ -111,6 +201,11 @@ export const query = graphql`
           childMarkdownRemark {
             rawMarkdownBody
           }
+        }
+      }
+      process {
+        fixed(height: 320, width: 640) {
+          ...GatsbyContentfulFixed
         }
       }
       banners {
