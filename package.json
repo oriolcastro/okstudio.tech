@@ -16,7 +16,7 @@
     "gatsby-plugin-sass": "next",
     "gatsby-plugin-sharp": "next",
     "gatsby-plugin-sitemap": "next",
-    "gatsby-source-contentful": "^2.0.1-beta.5",
+    "gatsby-source-contentful": "^2.0.1-beta.6",
     "gatsby-source-filesystem": "next",
     "gatsby-transformer-remark": "next",
     "node-sass": "^4.9.0",
