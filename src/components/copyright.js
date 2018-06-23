@@ -6,7 +6,7 @@ import { Link } from 'gatsby'
 const Copyright = () => (
   <div className="copyright-wrap">
     <Container>
-      <Columns>
+      <Columns isMobile>
         <Column isSize="3/4">
           <p>
             Fet amb <FaHeart className="has-text-danger" /> a Vilanova i la

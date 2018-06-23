@@ -10,7 +10,10 @@ const Service = props => {
     <div className="service">
       <Title>{props.title}</Title>
       <Columns>
-        <Column isSize="1/4">
+        <Column
+          isSize={{ desktop: '1/4', mobile: '1/2' }}
+          isOffset={{ mobile: '1/4' }}
+        >
           <Img fluid={props.img} />
         </Column>
         <Column isSize="3/4">

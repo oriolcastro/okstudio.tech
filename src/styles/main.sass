@@ -26,6 +26,9 @@
 .add-bottom-margin
   margin-bottom: 12px
 
+
+
+//// CSS FOR DIFERENT ELEMENTS OF THE SITE
 //Customize header Section
 .my-navbar
     background-color: transparent
@@ -68,12 +71,9 @@
   color: $primary
 
 
-// Customize Hero section on pages and home
+//Hero section on pages and home
 .page-hero
   background: linear-gradient(120deg, #2c3e50, #3498db)
-  //background: linear-gradient(to left, #00d2ff, #3a7bd5)
-  //background: linear-gradient(to bottom, #0052d4, #4364f7, #6fb1fc)
-  // background: linear-gradient(180deg, rgba(0,127,255,1) 10%, rgba(255,255,255,1) 200%)
   @media screen and (max-width: 1087px)
     padding-top: 58px
 .home-hero
@@ -85,7 +85,7 @@
     padding-top: 58px
 
 
-//Customize the service component
+//Service component
 .add-padding-lat
   padding: 0px 12px
 .serveis_cta-container
@@ -97,10 +97,14 @@
   margin-bottom: 48px
 
 
-//Customize the hero section for single-project and single-blog pages
+//Hero section for single-project and single-blog pages
 .single-hero
   position: relative
   z-index: 1
+  @include mobile
+    padding-top: 88px
+    height: auto
+    background-color: $primary
 .single-hero__text
   position: absolute
   width: 100%
@@ -108,13 +112,16 @@
   bottom: 0
   padding: 24px
   margin: 0 48px
+  @include mobile
+    margin: 0
+    position: relative
   h1
     color: $white
   h2
     color: $white
 
 
-//Customize the projects page masonry
+//Masonry in the projects page
 .projects-grid
   display: flex
   margin-left: -30px
@@ -147,7 +154,6 @@
     text-align: center
     transition: all 0.5s ease-in-out
     color: $white
-
   h2
     transition: all 0.5s ease-in-out
     color: $white
@@ -164,7 +170,7 @@
   transition: all 0.5s ease-in-out
 
 
-//Customize the banner
+//CTA Banner
 .cta-banner
   background-color: $primary
   padding: 48px 24px
@@ -174,28 +180,32 @@
   .cta-button
     text-align: center
 
-//Customize the client opinion cta-banner
+
+//Client opinion banner
 .client-opinion-banner
   background-color: $success
   p, h1,h5, h6
     color: $success-invert
 
-//ContactePage
+
+//Contact page
 .privacyContainer
   margin-top: 48px
 .privacyInfo
   white-space: pre-line
 
+
 //Method page
 .principle-text
-  p
-    margin: 0 6rem
+  @include desktop
+    p
+      margin: 0 6rem
 .has-shadow
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
   margin: 1rem
 
 
-// Customize the footer
+//Footer
 .footer
   padding-bottom: 48px
   background-color: $light

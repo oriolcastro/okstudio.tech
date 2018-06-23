@@ -7,13 +7,13 @@ import { Title, Tag } from 'bloomer'
 const SingleHero = props => {
   return (
     <div className="single-hero">
-      <Img fluid={props.img} />
+      <Img fluid={props.img} outerWrapperClassName="is-hidden-mobile" />
       <div className="single-hero__text">
         <Title>{props.title}</Title>
 
         {props.category.map((c, i) => (
           <div className="button-wrapper">
-            <Tag isColor="primary" key={i}>
+            <Tag isColor="white" key={i}>
               {c}{' '}
             </Tag>
           </div>

@@ -50,6 +50,12 @@ const MetodePage = ({ data }) => (
           </Column>
         </Columns>
         <Columns isVCentered isCentered>
+          <Column isHidden={['desktop', 'tablet']}>
+            <Img
+              fluid={data.contentfulMethodPage.principles[1].image.fluid}
+              outerWrapperClassName="has-shadow"
+            />
+          </Column>
           <Column>
             <Content className="principle-text">
               <h4 className="has-text-centered">
@@ -63,7 +69,7 @@ const MetodePage = ({ data }) => (
               </p>
             </Content>
           </Column>
-          <Column>
+          <Column isHidden="mobile">
             <Img
               fluid={data.contentfulMethodPage.principles[1].image.fluid}
               outerWrapperClassName="has-shadow"
@@ -105,10 +111,12 @@ const MetodePage = ({ data }) => (
           {' '}
           Tots els projectes segueixen un procés de 4 fases
         </Title>
-        <Img
-          outerWrapperClassName="image-is-centered"
-          fixed={data.contentfulMethodPage.process.fixed}
-        />
+        <Columns isCentered>
+          <Column isSize={{ desktop: '1/2', mobile: 'full' }}>
+            <Img fluid={data.contentfulMethodPage.process.fluid} />
+          </Column>
+        </Columns>
+
         <Columns isCentered>
           <Column isSize="1/4">
             <Box className="is-full-height">
@@ -204,8 +212,8 @@ export const query = graphql`
         }
       }
       process {
-        fixed(height: 320, width: 640) {
-          ...GatsbyContentfulFixed
+        fluid(maxHeight: 320, maxWidth: 640) {
+          ...GatsbyContentfulFluid
         }
       }
       banners {
