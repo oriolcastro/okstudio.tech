@@ -1,5 +1,6 @@
 import React from 'react'
 import Img from 'gatsby-image'
+import { graphql } from 'gatsby'
 
 import { Section, Container, Columns, Column, Content, Title } from 'bloomer'
 

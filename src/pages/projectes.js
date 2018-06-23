@@ -1,5 +1,6 @@
 import React from 'react'
 import Masonry from 'react-masonry-css'
+import { graphql } from 'gatsby'
 
 import { Section, Container, Title } from 'bloomer'
 
