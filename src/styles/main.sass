@@ -11,6 +11,20 @@
   flex: 1;
   margin-top: -88px
 
+////ADDED HELPERS
+//Align the image in Img component at the center of its parent
+.image-is-centered
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  justify-content: center
+  align-items: center
+//Makes the element the same height as the parrent so diferent components have the same heigh
+.is-full-height
+  height: 100%
+//Adds small bottom margin to elements that don't have by default to separete from the next in the tree
+.add-bottom-margin
+  margin-bottom: 12px
 
 //Customize header Section
 .my-navbar
@@ -175,9 +189,10 @@
 //Method page
 .principle-text
   p
-    margin: 0 4rem
+    margin: 0 6rem
 .has-shadow
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+  margin: 1rem
 
 
 // Customize the footer
