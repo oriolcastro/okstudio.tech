@@ -13,8 +13,8 @@ const ProjectesPage = ({ data }) => {
   return (
     <Layout>
       <PageHero
-        title="La nostra feina és la millor presentació"
-        subtitle="Per a nosaltres no existeixen projectes petits ni reptes massa ambiciosos"
+        title={data.contentfulProjectsPage.heroTitle}
+        subtitle={data.contentfulProjectsPage.heroSubtitle}
       />
       <Section>
         <Container>
@@ -40,9 +40,9 @@ const ProjectesPage = ({ data }) => {
         </Container>
       </Section>
       <CTABanner
-        content="T'agrada la nostra feina?"
-        buttonText="Contacta amb nosaltres"
-        buttonLink="/contacte"
+        content={data.contentfulProjectsPage.banners[0].content}
+        buttonText={data.contentfulProjectsPage.banners[0].btnText}
+        buttonLink={data.contentfulProjectsPage.banners[0].btnLink}
       />
     </Layout>
   )
@@ -64,6 +64,15 @@ export const query = graphql`
             }
           }
         }
+      }
+    }
+    contentfulProjectsPage {
+      heroTitle
+      heroSubtitle
+      banners {
+        content
+        btnText
+        btnLink
       }
     }
   }

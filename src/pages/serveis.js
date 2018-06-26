@@ -11,8 +11,8 @@ import CTABanner from '../components/ctabanner'
 const ServeisPage = ({ data }) => (
   <Layout>
     <PageHero
-      title="Descobriex que podem fer per tu"
-      subtitle="Sigui quina sigui la teva necessitat estem aquí per acompanyar-te en el camí"
+      title={data.contentfulServicesPage.heroTitle}
+      subtitle={data.contentfulServicesPage.heroSubtitle}
     />
     <Section>
       <Container>
@@ -58,6 +58,10 @@ export const query = graphql`
           serviceColor
         }
       }
+    }
+    contentfulServicesPage {
+      heroTitle
+      heroSubtitle
     }
   }
 `
