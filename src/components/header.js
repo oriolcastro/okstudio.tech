@@ -74,11 +74,11 @@ class Header extends Component {
                 <p className="menu-item">mètode</p>
               </NavbarItem>
             </Link>
-            <Link onClick={this.closeNav} to="/blog">
+            {/* <Link onClick={this.closeNav} to="/blog">
               <NavbarItem>
                 <p className="menu-item">blog</p>
               </NavbarItem>
-            </Link>
+            </Link> */}
             <Link onClick={this.closeNav} to="/contacte">
               <NavbarItem isHidden="desktop">
                 <p className="menu-item">contacte</p>

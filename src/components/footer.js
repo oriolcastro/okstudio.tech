@@ -59,9 +59,9 @@ const AppFooter = () => (
               <Link to="/projectes">
                 <p>Projectes destacat 3</p>
               </Link>
-              <Title isSize="5">
+              {/* <Title isSize="5">
                 <Link to="/blog">Blog</Link>
-              </Title>
+              </Title> */}
               <Title isSize="5">
                 <Link to="/contacte">Contacte</Link>
               </Title>
