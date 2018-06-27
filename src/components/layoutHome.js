@@ -1,14 +1,14 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 
-import Header from '../components/header'
+import HeaderHome from '../components/headerHome'
 import AppFooter from '../components/footer'
 import Copyright from '../components/copyright'
 
 import '../styles/main.sass'
 
-const Layout = ({ children, data }) => (
-  <div className="my-site has-navbar-fixed-top">
+const LayoutHome = ({ children, data }) => (
+  <div className="my-site">
     <Helmet
       title="Ok! studio"
       meta={[
@@ -16,12 +16,12 @@ const Layout = ({ children, data }) => (
         { name: 'keywords', content: 'sample, something' },
       ]}
     />
-    <Header />
+    <HeaderHome />
 
-    {children}
+    <div className="home-content">{children}</div>
     <AppFooter />
     <Copyright />
   </div>
 )
 
-export default Layout
+export default LayoutHome

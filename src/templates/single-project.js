@@ -22,12 +22,15 @@ const SingleProject = ({ data }) => {
         <Container>
           <Columns isCentered>
             <Column isSize="1/4">
-              <Img fluid={data.contentfulProject.clientLogo.fluid} />
+              <Img
+                outerWrapperClassName="client-logo"
+                fluid={data.contentfulProject.clientLogo.fluid}
+              />
             </Column>
             <Column>
               <Content>
                 <div
-                  className="has-text-justified"
+                  className="has-text-justified client-description"
                   dangerouslySetInnerHTML={{
                     __html:
                       data.contentfulProject.clientDescription
