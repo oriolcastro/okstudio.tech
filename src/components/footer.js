@@ -5,7 +5,7 @@ import FaTwitter from 'react-icons/lib/fa/twitter-square'
 import FaInstagram from 'react-icons/lib/fa/instagram'
 import FaGithub from 'react-icons/lib/fa/github-square'
 
-import logotype from '../img/logotype.png'
+import logotype from '../img/logotype_footer.png'
 const AppFooter = () => (
   <div>
     <Footer id="footer">

@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 import FaArrowright from 'react-icons/lib/fa/arrow-right'
 
-import { Title, Subtitle, Tag } from 'bloomer'
+import { Title, Tag } from 'bloomer'
 
 const ProjectsGridElement = props => {
   return (

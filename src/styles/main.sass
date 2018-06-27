@@ -7,7 +7,7 @@
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-.my-site-content
+.home-content
   flex: 1;
   margin-top: -88px
 
@@ -31,15 +31,24 @@
 //// CSS FOR DIFERENT ELEMENTS OF THE SITE
 //Customize header Section
 .my-navbar
-    background-color: transparent
+    background-color: $primary
     padding-top: 12px
     padding-left: 24px
     padding-right: 24px
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
     @media screen and (max-width: 1087px)
-      background-color: transparent
-      padding-top: 12px
+      background-color: $primary
+      padding-top: 16px
       padding-left: 0
       padding-right: 0
+.navbar-home
+  background-color: transparent
+  padding-top: 12px
+  padding-left: 24px
+  padding-right: 24px
+  @media screen and (max-width: 1087px)
+    background-color: transparent
+    padding-top: 12px
 .navbar-menu
   @media screen and (max-width: 1087px)
       background-color: $light
@@ -203,8 +212,18 @@
 .has-shadow
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
   margin: 1rem
+  @include mobile
+    margin: 0
 
 
+//Single Project page elements
+.client-logo
+  padding: 24px
+.client-description
+  @include desktop
+    p
+      margin: 0 6rem
+      padding-top: 24px
 //Footer
 .footer
   padding-bottom: 48px

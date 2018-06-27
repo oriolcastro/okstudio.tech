@@ -10,7 +10,7 @@ const ClientOpinionBanner = props => {
       <Container>
         <Columns>
           <Column isSize="1/4">
-            <Img fluid={props.img} />
+            <Img outerWrapperClassName="client-logo" fluid={props.img} />
           </Column>
           <Column>
             <Title>L'opinió del client</Title>

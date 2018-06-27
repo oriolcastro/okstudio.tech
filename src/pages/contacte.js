@@ -21,8 +21,8 @@ import PageHero from '../components/pagehero'
 const ContactePage = () => (
   <Layout>
     <PageHero
-      title="Estem aquí per ajudar-te"
-      subtitle="Si ens expliques quina necessitat tens, segur que trobarem la forma de treballar plegats"
+      title="Estem aquí per ajudar"
+      subtitle="Si ens expliqueu quina necessitat teniu, segur que trobarem la forma de treballar plegats"
     />
     <Section>
       <Container>

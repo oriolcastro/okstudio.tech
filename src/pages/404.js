@@ -1,10 +1,24 @@
 import React from 'react'
+import { Link } from 'gatsby'
+
+import { Section, Container, Title } from 'bloomer'
+
 import Layout from '../components/layout'
+import PageHero from '../components/pagehero'
 
 const NotFoundPage = () => (
   <Layout>
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+    <PageHero
+      title="Ops..."
+      subtitle="Alguna cosa ha anat malament. Aquesta pàgina no existeix."
+    />
+    <Section>
+      <Container>
+        <Title className="has-text-centered">
+          <Link to="/">Torna a la pàgina principal</Link>{' '}
+        </Title>
+      </Container>
+    </Section>
   </Layout>
 )
 

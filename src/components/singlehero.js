@@ -7,7 +7,11 @@ import { Title, Tag } from 'bloomer'
 const SingleHero = props => {
   return (
     <div className="single-hero">
-      <Img fluid={props.img} outerWrapperClassName="is-hidden-mobile" />
+      <Img
+        fluid={props.img}
+        outerWrapperClassName="is-hidden-mobile"
+        backgroundColor={true}
+      />
       <div className="single-hero__text">
         <Title>{props.title}</Title>
 
