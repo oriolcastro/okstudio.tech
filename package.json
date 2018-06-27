@@ -6,7 +6,7 @@
   "dependencies": {
     "bloomer": "^0.6.3",
     "bulma": "^0.7.1",
-    "gatsby": "^2.0.0-beta.11",
+    "gatsby": "^2.0.0-beta.12",
     "gatsby-image": "next",
     "gatsby-plugin-catch-links": "next",
     "gatsby-plugin-manifest": "next",
@@ -19,6 +19,7 @@
     "gatsby-source-contentful": "^2.0.1-beta.8",
     "gatsby-source-filesystem": "next",
     "gatsby-transformer-remark": "next",
+    "gatsby-transformer-sharp": "^1.6.27",
     "node-sass": "^4.9.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
