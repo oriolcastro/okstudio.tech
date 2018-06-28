@@ -20,7 +20,7 @@ const SingleProject = ({ data }) => {
 
       <Section>
         <Container>
-          <Columns isCentered>
+          <Columns isCentered isVCentered>
             <Column isSize="1/4">
               <Img
                 outerWrapperClassName="client-logo"
@@ -34,7 +34,7 @@ const SingleProject = ({ data }) => {
                   dangerouslySetInnerHTML={{
                     __html:
                       data.contentfulProject.clientDescription
-                    .childMarkdownRemark.html,
+                        .childMarkdownRemark.html,
                   }}
                 />
               </Content>
@@ -47,7 +47,7 @@ const SingleProject = ({ data }) => {
               dangerouslySetInnerHTML={{
                 __html:
                   data.contentfulProject.challengeContent.childMarkdownRemark
-                .html,
+                    .html,
               }}
             />
           </Content>
@@ -58,7 +58,7 @@ const SingleProject = ({ data }) => {
               dangerouslySetInnerHTML={{
                 __html:
                   data.contentfulProject.solutionContent.childMarkdownRemark
-                .html,
+                    .html,
               }}
             />
           </Content>
@@ -69,7 +69,7 @@ const SingleProject = ({ data }) => {
               dangerouslySetInnerHTML={{
                 __html:
                   data.contentfulProject.tecnologyContent.childMarkdownRemark
-                .html,
+                    .html,
               }}
             />
           </Content>
@@ -83,18 +83,25 @@ const SingleProject = ({ data }) => {
               }}
             />
           </Content>
+          <Columns isMultiline>
+            {data.contentfulProject.resultImg.map(image => (
+              <Column isSize="1/2">
+                <Img fluid={image.fluid} />
+              </Column>
+            ))}
+          </Columns>
         </Container>
       </Section>
 
       {data.contentfulProject.clientOpinion.childMarkdownRemark
         .rawMarkdownBody !== 'empty' && (
-          <ClientOpinionBanner
-            img={data.contentfulProject.clientLogo.fluid}
-            content={
-              data.contentfulProject.clientOpinion.childMarkdownRemark.html
-            }
-          />
-        )}
+        <ClientOpinionBanner
+          img={data.contentfulProject.clientLogo.fluid}
+          content={
+            data.contentfulProject.clientOpinion.childMarkdownRemark.html
+          }
+        />
+      )}
 
       <CTABanner
         content="T'agrada la nostra feina?"
@@ -143,6 +150,11 @@ export const query = graphql`
       resultContent {
         childMarkdownRemark {
           html
+        }
+      }
+      resultImg {
+        fluid(maxWidth: 1200, maxHeight: 1200) {
+          ...GatsbyContentfulFluid
         }
       }
       clientOpinion {
