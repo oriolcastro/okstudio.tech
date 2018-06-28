@@ -34,7 +34,7 @@ const SingleProject = ({ data }) => {
                   dangerouslySetInnerHTML={{
                     __html:
                       data.contentfulProject.clientDescription
-                        .childMarkdownRemark.html,
+                    .childMarkdownRemark.html,
                   }}
                 />
               </Content>
@@ -47,7 +47,7 @@ const SingleProject = ({ data }) => {
               dangerouslySetInnerHTML={{
                 __html:
                   data.contentfulProject.challengeContent.childMarkdownRemark
-                    .html,
+                .html,
               }}
             />
           </Content>
@@ -58,7 +58,7 @@ const SingleProject = ({ data }) => {
               dangerouslySetInnerHTML={{
                 __html:
                   data.contentfulProject.solutionContent.childMarkdownRemark
-                    .html,
+                .html,
               }}
             />
           </Content>
@@ -69,7 +69,7 @@ const SingleProject = ({ data }) => {
               dangerouslySetInnerHTML={{
                 __html:
                   data.contentfulProject.tecnologyContent.childMarkdownRemark
-                    .html,
+                .html,
               }}
             />
           </Content>
@@ -85,10 +85,17 @@ const SingleProject = ({ data }) => {
           </Content>
         </Container>
       </Section>
-      <ClientOpinionBanner
-        img={data.contentfulProject.clientLogo.fluid}
-        content={data.contentfulProject.clientOpinion.childMarkdownRemark.html}
-      />
+
+      {data.contentfulProject.clientOpinion.childMarkdownRemark
+        .rawMarkdownBody !== 'empty' && (
+          <ClientOpinionBanner
+            img={data.contentfulProject.clientLogo.fluid}
+            content={
+              data.contentfulProject.clientOpinion.childMarkdownRemark.html
+            }
+          />
+        )}
+
       <CTABanner
         content="T'agrada la nostra feina?"
         buttonText="Contacta'ns"
@@ -141,6 +148,7 @@ export const query = graphql`
       clientOpinion {
         childMarkdownRemark {
           html
+          rawMarkdownBody
         }
       }
     }

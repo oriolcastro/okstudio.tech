@@ -17,6 +17,27 @@ module.exports = {
       resolve: `gatsby-plugin-sitemap`,
     },
     {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1600,
+              linkImagesToOriginal: true,
+            },
+          },
+          {
+            resolve: 'gatsby-remark-external-links',
+            options: {
+              target: '_blank',
+              rel: 'nofollow noopener noreferrer',
+            },
+          },
+        ],
+      },
+    },
+    {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: process.env.MY_CONTENTFUL_SPACE_ID || '',

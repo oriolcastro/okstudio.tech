@@ -50,8 +50,8 @@ const AppFooter = () => (
             </Column>
             <Column className="is-3-desktop is-6-tablet">
               <Title isSize="5">Projectes</Title>
-              <Link to="/projectes">
-                <p>Projecte destacat 1</p>
+              <Link to="/esplaiadapp-2018">
+                <p>Esplaiadapp '18</p>
               </Link>
               <Link to="/projectes">
                 <p>Projectes destacat 2</p>
