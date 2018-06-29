@@ -52,7 +52,7 @@ export default ProjectesPage
 
 export const query = graphql`
   query ProjectsPageQuery {
-    allContentfulProject {
+    allContentfulProject(sort: { order: DESC, fields: [createdAt] }) {
       edges {
         node {
           title

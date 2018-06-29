@@ -53,7 +53,7 @@ const MetodePage = ({ data }) => (
           <Column isHidden={['desktop', 'tablet']}>
             <Img
               fluid={data.contentfulMethodPage.principles[1].image.fluid}
-              outerWrapperClassName="has-shadow"
+              outerWrapperClassName="image-has-shadow principle-image"
             />
           </Column>
           <Column>

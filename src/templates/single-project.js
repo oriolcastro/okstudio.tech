@@ -1,8 +1,17 @@
 import React from 'react'
 import Img from 'gatsby-image'
 import { graphql } from 'gatsby'
+import FaExtLink from 'react-icons/lib/fa/external-link'
 
-import { Section, Container, Columns, Column, Content, Title } from 'bloomer'
+import {
+  Section,
+  Container,
+  Columns,
+  Column,
+  Content,
+  Title,
+  Button,
+} from 'bloomer'
 
 import Layout from '../components/layout'
 import SingleHero from '../components/singlehero'
@@ -21,7 +30,10 @@ const SingleProject = ({ data }) => {
       <Section>
         <Container>
           <Columns isCentered isVCentered>
-            <Column isSize="1/4">
+            <Column
+              isSize={{ desktop: '1/4', mobile: 8 }}
+              isOffset={{ mobile: 2 }}
+            >
               <Img
                 outerWrapperClassName="client-logo"
                 fluid={data.contentfulProject.clientLogo.fluid}
@@ -34,7 +46,7 @@ const SingleProject = ({ data }) => {
                   dangerouslySetInnerHTML={{
                     __html:
                       data.contentfulProject.clientDescription
-                        .childMarkdownRemark.html,
+                    .childMarkdownRemark.html,
                   }}
                 />
               </Content>
@@ -47,7 +59,7 @@ const SingleProject = ({ data }) => {
               dangerouslySetInnerHTML={{
                 __html:
                   data.contentfulProject.challengeContent.childMarkdownRemark
-                    .html,
+                .html,
               }}
             />
           </Content>
@@ -58,7 +70,7 @@ const SingleProject = ({ data }) => {
               dangerouslySetInnerHTML={{
                 __html:
                   data.contentfulProject.solutionContent.childMarkdownRemark
-                    .html,
+                .html,
               }}
             />
           </Content>
@@ -69,11 +81,12 @@ const SingleProject = ({ data }) => {
               dangerouslySetInnerHTML={{
                 __html:
                   data.contentfulProject.tecnologyContent.childMarkdownRemark
-                    .html,
+                .html,
               }}
             />
           </Content>
           <Title>El Resultat</Title>
+
           <Content>
             <div
               className="has-text-justified"
@@ -83,6 +96,22 @@ const SingleProject = ({ data }) => {
               }}
             />
           </Content>
+          <p className="has-text-centered add-bottom-margin">
+            <Button
+              href={data.contentfulProject.projectLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              isColor="primary"
+              isOutlined
+            >
+              <FaExtLink
+                height="1.5em"
+                width="1.5em"
+                className="my-icon-container"
+              />
+              {data.contentfulProject.title}
+            </Button>
+          </p>
           <Columns isMultiline>
             {data.contentfulProject.resultImg.map(image => (
               <Column isSize="1/2">
@@ -118,12 +147,12 @@ export const query = graphql`
       title
       category
       heroImg {
-        fluid(maxHeight: 400, maxWidth: 1400) {
+        fluid(maxHeight: 400, maxWidth: 1600) {
           ...GatsbyContentfulFluid
         }
       }
       clientLogo {
-        fluid(maxWidth: 200, maxHeight: 200) {
+        fluid(maxWidth: 400) {
           ...GatsbyContentfulFluid
         }
       }
@@ -152,8 +181,9 @@ export const query = graphql`
           html
         }
       }
+      projectLink
       resultImg {
-        fluid(maxWidth: 1200, maxHeight: 1200) {
+        fluid(maxWidth: 1600) {
           ...GatsbyContentfulFluid
         }
       }

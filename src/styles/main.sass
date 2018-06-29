@@ -25,7 +25,11 @@
 //Adds small bottom margin to elements that don't have by default to separete from the next in the tree
 .add-bottom-margin
   margin-bottom: 12px
-
+//Add margin to the icons from react-icons
+.my-icon-container
+  margin: 8px
+.image-has-shadow
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
 
 
 //// CSS FOR DIFERENT ELEMENTS OF THE SITE
@@ -209,8 +213,7 @@
   @include desktop
     p
       margin: 0 6rem
-.has-shadow
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+.principle-image
   margin: 1rem
   @include mobile
     margin: 0
@@ -236,8 +239,6 @@
     margin-bottom: 0
   .logotype
     padding-right: 48px
-  .my-icon-container
-    margin-right: 8px
 .copyright-wrap
   padding: 12px 24px
   background-color: $grey-dark
