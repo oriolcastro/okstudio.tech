@@ -32,7 +32,7 @@ const ProjectesPage = ({ data }) => {
                   slug={node.slug}
                   title={node.title}
                   category={node.category}
-                  heroImg={node.heroImg.fluid}
+                  masonryImg={node.masonryImg.fluid}
                 />
               </div>
             ))}
@@ -58,8 +58,8 @@ export const query = graphql`
           title
           category
           slug
-          heroImg {
-            fluid(maxWidth: 800, maxHeight: 800) {
+          masonryImg {
+            fluid(maxWidth: 600, maxHeight: 600) {
               ...GatsbyContentfulFluid
             }
           }

@@ -53,10 +53,10 @@ const AppFooter = () => (
               <Link to="/esplaiadapp-2018">
                 <p>Esplaiadapp '18</p>
               </Link>
-              <Link to="/projectes">
+              <Link to="/cc-sagrada-familia">
                 <p>Web CC Sagrada Família</p>
               </Link>
-              <Link to="/cc-sagrada-familia">
+              <Link to="/ecologia-politica">
                 <p>Web Ecologia Política</p>
               </Link>
               {/* <Title isSize="5">

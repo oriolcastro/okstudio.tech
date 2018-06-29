@@ -9,7 +9,8 @@ const ProjectsGridElement = props => {
   return (
     <Link to={props.slug}>
       <div className="projectsgrid_element-container">
-        <Img fluid={props.heroImg} />
+        <Img fluid={props.masonryImg} />
+
         <div className="projectsgrid_element-text">
           <Title isSize="4">{props.title}</Title>
           {props.category.map((c, i) => (
