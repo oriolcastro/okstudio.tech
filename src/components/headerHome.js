@@ -40,7 +40,7 @@ class HeaderHome extends Component {
   }
   render() {
     return (
-      <Navbar className={'navbar-home'}>
+      <Navbar className={'home-navbar'}>
         <NavbarBrand>
           <Link to="/">
             <NavbarItem onClick={this.closeNav}>

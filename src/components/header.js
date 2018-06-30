@@ -40,7 +40,7 @@ class Header extends Component {
   }
   render() {
     return (
-      <Navbar className={'my-navbar is-transparent is-fixed-top'}>
+      <Navbar className={'main-navbar is-transparent is-fixed-top'}>
         <NavbarBrand>
           <Link to="/">
             <NavbarItem onClick={this.closeNav}>

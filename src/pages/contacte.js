@@ -1,4 +1,5 @@
 import React from 'react'
+import { graphql } from 'gatsby'
 
 import {
   Section,
@@ -18,12 +19,15 @@ import {
 import Layout from '../components/layout'
 import PageHero from '../components/pagehero'
 
-const ContactePage = () => (
+const ContactePage = ({ data }) => (
   <Layout>
     <PageHero
-      title="Estem aquí per ajudar"
-      subtitle="Si ens expliqueu quina necessitat teniu, segur que trobarem la forma de treballar plegats"
+      title={
+        data.contentfulContactPage.heroTitle.childMarkdownRemark.rawMarkdownBody
+      }
+      subtitle={data.contentfulContactPage.heroSubtitle}
     />
+
     <Section>
       <Container>
         <Columns isMultiline>
@@ -89,14 +93,18 @@ const ContactePage = () => (
               Informació sobre la política de privacitat
             </div>
             <p className="privacyInfo">
-              Responsable: Ok! Studio - Oriol Castro Arnau.{'\n'} Finalitat:
-              Gestionar l'enviament d'informació relacionada amb la petició.{
-                '\n'
+              {
+                data.contentfulContactPage.privacyInfo.childMarkdownRemark
+                  .rawMarkdownBody
               }
-              Legitimació: Consentiment de la persona interessada. Podrà exercir
-              els seus drets d'accés, rectificació, limitació o suprimir les
-              dades a hola@okstudio.tech{'\n'}
-              Destinataris: Ok! Studio - Oriol Castro Arnau.
+              {/* Responsable: Ok! Studio - Oriol Castro Arnau.{'\n'} Finalitat:
+                Gestionar l'enviament d'informació relacionada amb la petició.{
+                '\n'
+                }
+                Legitimació: Consentiment de la persona interessada. Podrà exercir
+                els seus drets d'accés, rectificació, limitació o suprimir les
+                dades a hola@okstudio.tech{'\n'}
+              Destinataris: Ok! Studio - Oriol Castro Arnau. */}
             </p>
           </Column>
         </Columns>
@@ -106,3 +114,21 @@ const ContactePage = () => (
 )
 
 export default ContactePage
+
+export const query = graphql`
+  query ContactPageQuery {
+    contentfulContactPage {
+      heroTitle {
+        childMarkdownRemark {
+          rawMarkdownBody
+        }
+      }
+      heroSubtitle
+      privacyInfo {
+        childMarkdownRemark {
+          rawMarkdownBody
+        }
+      }
+    }
+  }
+`

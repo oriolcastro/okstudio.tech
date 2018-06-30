@@ -10,7 +10,7 @@ import '../styles/main.sass'
 import Config from '../../meta/config'
 
 const Layout = ({ children, data }) => (
-  <div className="my-site has-navbar-fixed-top">
+  <div className="my-site main-layout">
     <Helmet>
       <title>{Config.siteTitle}</title>
       <meta name="description" content={Config.siteDescription} />

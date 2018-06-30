@@ -7,6 +7,9 @@
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+//Add padding in the layout that uses fixed navbar
+.main-layout
+  padding-top: 72px
 .home-content
   flex: 1;
   margin-top: -88px
@@ -34,25 +37,19 @@
 
 //// CSS FOR DIFERENT ELEMENTS OF THE SITE
 //Customize header Section
-.my-navbar
+.main-navbar
     background-color: $primary
-    padding-top: 12px
-    padding-left: 24px
-    padding-right: 24px
+    padding: 0px 24px
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
     @media screen and (max-width: 1087px)
       background-color: $primary
-      padding-top: 16px
       padding-left: 0
       padding-right: 0
-.navbar-home
+.home-navbar
   background-color: transparent
   padding-top: 12px
-  padding-left: 24px
-  padding-right: 24px
   @media screen and (max-width: 1087px)
-    background-color: transparent
-    padding-top: 12px
+    padding-top: 0
 .navbar-menu
   @media screen and (max-width: 1087px)
       background-color: $light
@@ -70,15 +67,15 @@
 .navbar-burger
   color: white
 .menu-item
-  font-size: 1.5rem
+  font-size: 1.25rem
   font-weight: bolder
-  line-height: 2.5
+  line-height: 2.75
   text-transform: uppercase
   &:hover
     color: $grey-lighter
 .btn-header
   text-transform: uppercase
-  font-size: 1.15rem
+  font-size: 1rem
   font-weight: bold
   background-color: $white
   color: $primary
@@ -86,9 +83,9 @@
 
 //Hero section on pages and home
 .page-hero
-  background: linear-gradient(120deg, #2c3e50, #3498db)
-  @media screen and (max-width: 1087px)
-    padding-top: 58px
+  h1
+    white-space: pre-wrap
+
 .home-hero
   background-image: url(../img/services-hero.jpg)
   background-position: center center
@@ -115,7 +112,6 @@
   position: relative
   z-index: 1
   @include mobile
-    padding-top: 88px
     height: auto
     background-color: $primary
 .single-hero__text
@@ -188,6 +184,7 @@
 //CTA Banner
 .cta-banner
   background-color: $primary
+  background-image: linear-gradient(141deg, #0088cc 0%, #007FFF 71%, #1a66ff 100%)
   padding: 48px 24px
   h1
     color: $primary-invert

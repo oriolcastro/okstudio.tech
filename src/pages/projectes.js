@@ -2,7 +2,7 @@ import React from 'react'
 import Masonry from 'react-masonry-css'
 import { graphql } from 'gatsby'
 
-import { Section, Container, Title } from 'bloomer'
+import { Section, Container } from 'bloomer'
 
 import Layout from '../components/layout'
 import PageHero from '../components/pagehero'
@@ -13,14 +13,14 @@ const ProjectesPage = ({ data }) => {
   return (
     <Layout>
       <PageHero
-        title={data.contentfulProjectsPage.heroTitle}
+        title={
+          data.contentfulProjectsPage.heroTitle.childMarkdownRemark
+            .rawMarkdownBody
+        }
         subtitle={data.contentfulProjectsPage.heroSubtitle}
       />
       <Section>
         <Container>
-          <Title isSize="3">
-            Dona una ullada als últims projectes fets pels nostres clients
-          </Title>
           <Masonry
             breakpointCols={{ default: 3, 1023: 2, 767: 1 }}
             className="projects-grid"
@@ -67,7 +67,11 @@ export const query = graphql`
       }
     }
     contentfulProjectsPage {
-      heroTitle
+      heroTitle {
+        childMarkdownRemark {
+          rawMarkdownBody
+        }
+      }
       heroSubtitle
       banners {
         content

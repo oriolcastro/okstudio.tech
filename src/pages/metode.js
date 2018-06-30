@@ -19,7 +19,9 @@ import CTABanner from '../components/ctabanner'
 const MetodePage = ({ data }) => (
   <Layout>
     <PageHero
-      title={data.contentfulMethodPage.heroTitle}
+      title={
+        data.contentfulMethodPage.heroTitle.childMarkdownRemark.rawMarkdownBody
+      }
       subtitle={data.contentfulMethodPage.heroSubtitle}
     />
     <Section>
@@ -196,7 +198,11 @@ export default MetodePage
 export const query = graphql`
   query MethodPageQuery {
     contentfulMethodPage {
-      heroTitle
+      heroTitle {
+        childMarkdownRemark {
+          rawMarkdownBody
+        }
+      }
       heroSubtitle
       principles {
         title

@@ -11,7 +11,10 @@ import CTABanner from '../components/ctabanner'
 const ServeisPage = ({ data }) => (
   <Layout>
     <PageHero
-      title={data.contentfulServicesPage.heroTitle}
+      title={
+        data.contentfulServicesPage.heroTitle.childMarkdownRemark
+          .rawMarkdownBody
+      }
       subtitle={data.contentfulServicesPage.heroSubtitle}
     />
     <Section>
@@ -60,7 +63,12 @@ export const query = graphql`
       }
     }
     contentfulServicesPage {
-      heroTitle
+      heroTitle {
+        childMarkdownRemark {
+          rawMarkdownBody
+          html
+        }
+      }
       heroSubtitle
     }
   }

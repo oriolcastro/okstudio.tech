@@ -1,17 +1,23 @@
 import React from 'react'
 import Layout from '../components/layout'
-import PageHero from '../components/pagehero'
-import { Section, Container, Content, Title } from 'bloomer'
+
+import { Section, Container, Content, Title, Subtitle } from 'bloomer'
+
 const CreditsPage = () => (
   <Layout>
-    <PageHero
-      title="Credits"
-      subtitle="Referències als diferents recursos externs utilitzats en aquesta pàgina"
-    />
+    <Section>
+      <Container>
+        <Title>Crèdits</Title>
+        <Subtitle>
+          Referències als diferents recursos externs utilitzats en aquesta
+          pàgina
+        </Subtitle>
+      </Container>
+    </Section>
     <Section>
       <Container>
         <Content>
-          <Title>Iconografia</Title>
+          <Title isSize="4">Iconografia</Title>
           <ul>
             <li>
               <a
@@ -82,7 +88,7 @@ const CreditsPage = () => (
               </a>
             </li>
           </ul>
-          <Title>Imatges</Title>
+          <Title isSize="4">Imatges</Title>
           <ul>
             <li>
               "Proximitat" by{' '}
