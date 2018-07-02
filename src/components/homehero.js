@@ -1,7 +1,7 @@
 import React from 'react'
 import propTypes from 'prop-types'
-import Typing from 'react-typing-animation'
-
+import Typing, { Delay, Backspace } from 'react-typing-animation'
+import Link from 'gatsby'
 import { Title, Subtitle, Hero, HeroBody, Container } from 'bloomer'
 
 const HomeHero = props => {
@@ -11,15 +11,27 @@ const HomeHero = props => {
         <HeroBody>
           <Container>
             <Title isSize="2">{props.title}</Title>
-            <Subtitle>
-              <Typing speed={200} startDelay={2000} loop={true}>
-                <span>Webs modernes</span>
-                <Typing.Backspace count={13} />
-                <span>Aplicacions web</span>
-                <Typing.Backspace count={15} />
-                <span>Cloud computing</span>
+            <Subtitle isSize="3">
+              <Typing
+                speed={150}
+                startDelay={1500}
+                loop={true}
+                cursorClassName="home-hero-cursor"
+              >
+                <span>Una web moderna</span>
+                <Backspace count={15} delay={500} />
+                <span>La teva aplicació mòbil</span>
+                <Backspace count={23} delay={500} />
+                <span>Aprofitar les possibilitats del núvol</span>
+                <Backspace count={37} delay={500} />
+                <span>Eines per gestionar millor</span>
+                <Backspace count={26} delay={500} />
+                <span>Assesorament personalitzat</span>
               </Typing>
             </Subtitle>
+            <Link to="/serveis">
+              <Button isColor="primary">T'AJUDEM</Button>
+            </Link>
           </Container>
         </HeroBody>
       </Hero>
