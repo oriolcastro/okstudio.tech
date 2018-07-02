@@ -2,7 +2,7 @@ import React from 'react'
 import propTypes from 'prop-types'
 import Typing, { Delay, Backspace } from 'react-typing-animation'
 import Link from 'gatsby'
-import { Title, Subtitle, Hero, HeroBody, Container } from 'bloomer'
+import { Title, Subtitle, Hero, HeroBody, Container, Button } from 'bloomer'
 
 const HomeHero = props => {
   return (
