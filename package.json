@@ -6,8 +6,8 @@
   "dependencies": {
     "bloomer": "^0.6.3",
     "bulma": "^0.7.1",
-    "gatsby": "^2.0.0-beta.13",
-    "gatsby-image": "^2.0.0-beta.3",
+    "gatsby": "^2.0.0-beta.14",
+    "gatsby-image": "^2.0.0-beta.4",
     "gatsby-plugin-catch-links": "next",
     "gatsby-plugin-manifest": "next",
     "gatsby-plugin-netlify": "next",
@@ -28,7 +28,9 @@
     "react-dom": "^16.4.1",
     "react-helmet": "^5.2.0",
     "react-icons": "^2.2.7",
-    "react-masonry-css": "^1.0.11"
+    "react-masonry-css": "^1.0.11",
+    "react-typing-animation": "^1.3.3",
+    "react-typist": "^2.0.4"
   },
   "keywords": [
     "gatsby"
