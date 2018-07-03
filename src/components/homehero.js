@@ -1,7 +1,7 @@
 import React from 'react'
 import propTypes from 'prop-types'
 import Typing from 'react-typing-animation'
-import Link from 'gatsby'
+import { Link } from 'gatsby'
 import { Title, Subtitle, Hero, HeroBody, Container, Button } from 'bloomer'
 
 const HomeHero = props => {
