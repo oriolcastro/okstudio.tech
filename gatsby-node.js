@@ -16,7 +16,7 @@ exports.createPages = ({ graphql, actions }) => {
     `).then(result => {
       result.data.allContentfulProject.edges.forEach(({ node }) => {
         createPage({
-          path: `/${node.slug}`,
+          path: `/projectes/${node.slug}`,
           component: path.resolve(`./src/templates/single-project.js`),
           context: {
             slug: node.slug,
