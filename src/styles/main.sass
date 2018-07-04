@@ -33,7 +33,7 @@
   margin: 0px 8px
 .image-has-shadow
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
-// Makes a span transaprent to add invisible space 
+// Makes a span transaprent to add invisible space
 .invisible-space
   color: transparent
 
@@ -89,9 +89,24 @@
     white-space: pre-wrap
 
 .home-hero
-  background-image: url(../img/home-hero.jpg)
-  background-size: cover
-  background-color: #fff
+  background-color: #fff !important
+  @include fullhd
+    background-image: url(../img/HomeHero_fullhd.png)
+    background-size: cover
+  @include widescreen-only
+    background-image: url(../img/HomeHero_widescreen.png)
+    background-size: cover
+  @include desktop-only
+    background-image: url(../img/HomeHero_desktop.png)
+    background-size: cover
+  @include tablet-only
+    background-image: url(../img/HomeHero_tablet.png)
+    background-size: cover
+  @include mobile
+    background-image: url(../img/HomeHero_mobile.png)
+    background-size: cover
+  .hero-body
+    padding-top: 14rem !important
   @media screen and (max-width: 1087px)
     padding-top: 58px
   h1
