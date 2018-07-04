@@ -5,7 +5,7 @@ import HomeHero from '../components/homehero'
 
 const IndexPage = () => (
   <LayoutHome>
-    <HomeHero title="I si la innovació tecnològica estigues a l'abast de tothom?" />
+    <HomeHero title="Posem la innovació tecnològica a l'abast de la teva empresa" />
   </LayoutHome>
 )
 

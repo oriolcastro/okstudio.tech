@@ -95,8 +95,12 @@
   h1
     white-space: pre-wrap
     width: 60%
+    @include mobile
+      width: 100%
+    @include tablet
+      width: 85%
 .home-hero-cursor
-  color: white
+  color: white !important
 
 //Service component
 .add-padding-lat
