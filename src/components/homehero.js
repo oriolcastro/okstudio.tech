@@ -7,12 +7,12 @@ import { Title, Subtitle, Hero, HeroBody, Container, Button } from 'bloomer'
 class HomeHero extends Component {
   constructor(props) {
     super(props)
-    this.state = { typingFinished: false }
+    this.state = { showMoreMessage: false }
     this.typingFinished = this.typingFinished.bind(this)
   }
   typingFinished = () => {
     this.setState(prevState => ({
-      typingFinished: !prevState.typingFinished,
+      showMoreMessage: !prevState.showMoreMessage,
     }))
   }
 
@@ -43,7 +43,7 @@ class HomeHero extends Component {
                   <Typing.Speed ms={100} />
                   <span>Assesorament personalitzat</span>
                 </Typing>
-                {this.state.typingFinished && <span>I molt més...</span>}
+                {this.state.showMoreMessage && <span>I molt més...</span>}
                 <span className="invisible-space">.</span>
               </Subtitle>
               <Button isColor="white" isOutlined>
