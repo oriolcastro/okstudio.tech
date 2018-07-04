@@ -5,11 +5,15 @@ import FAChevronRight from 'react-icons/lib/fa/chevron-right'
 import { Title, Subtitle, Hero, HeroBody, Container, Button } from 'bloomer'
 
 class HomeHero extends Component {
-  state = {
-    typingFinished: false,
+  constructor(props) {
+    super(props)
+    this.state = { typingFinished: false }
+    this.typingFinished = this.typingFinished.bind(this)
   }
   typingFinished = () => {
-    this.setState({ typingFinished: true })
+    this.setState(prevState => ({
+      typingFinished: !prevState.typingFinished,
+    }))
   }
 
   render() {
