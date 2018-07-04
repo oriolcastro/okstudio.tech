@@ -14,7 +14,7 @@ const HomeHero = props => {
             <Title isSize="2" className="homeHero-title">
               {props.title}
             </Title>
-            <Subtitle isSize="3" className="homeHero-subtitle">
+            <Subtitle isSize="4" className="homeHero-subtitle">
               <Typing
                 speed={100}
                 cursorClassName="home-hero-cursor"
@@ -33,9 +33,10 @@ const HomeHero = props => {
                 <Typing.Backspace count={23} delay={500} speed={50} />
                 <Typing.Speed ms={100} />
                 <span>Assesorament personalitzat</span>
+                <Typing.Delay ms={1000} />
               </Typing>
               <p className="invisible-space">.</p>
-              <span className="invisible-space">.</span>
+              <p className="invisible-space">.</p>
             </Subtitle>
             <Link to={props.heroCTALink}>
               <Button
