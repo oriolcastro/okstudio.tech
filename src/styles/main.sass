@@ -102,11 +102,18 @@
   @include tablet-only
     background-image: url(../img/HomeHero_tablet.png)
     background-size: cover
+    .hero-body
+      padding-top: 14rem !important
+      padding-bottom: 14rem !important
   @include mobile
     background-image: url(../img/HomeHero_mobile.png)
     background-size: cover
-  .hero-body
-    padding-top: 14rem !important
+    .hero-body
+      padding-top: 5rem !important
+      padding-bottom: 5rem !important
+    .homeHero-cta-button
+      font-size: 0.9rem
+      width: 100%
   @media screen and (max-width: 1087px)
     padding-top: 58px
   h1

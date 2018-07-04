@@ -97,14 +97,6 @@ const ContactePage = ({ data }) => (
                 data.contentfulContactPage.privacyInfo.childMarkdownRemark
                   .rawMarkdownBody
               }
-              {/* Responsable: Ok! Studio - Oriol Castro Arnau.{'\n'} Finalitat:
-                Gestionar l'enviament d'informació relacionada amb la petició.{
-                '\n'
-                }
-                Legitimació: Consentiment de la persona interessada. Podrà exercir
-                els seus drets d'accés, rectificació, limitació o suprimir les
-                dades a hola@okstudio.tech{'\n'}
-              Destinataris: Ok! Studio - Oriol Castro Arnau. */}
             </p>
           </Column>
         </Columns>

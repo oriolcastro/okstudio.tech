@@ -11,8 +11,10 @@ const HomeHero = props => {
       <Hero isColor="primary" isSize="large" className="home-hero">
         <HeroBody>
           <Container>
-            <Title isSize="2">{props.title}</Title>
-            <Subtitle isSize="3">
+            <Title isSize="2" className="homeHero-title">
+              {props.title}
+            </Title>
+            <Subtitle isSize="3" className="homeHero-subtitle">
               {/* <Typing
                 speed={100}
                 cursorClassName="home-hero-cursor"
@@ -35,16 +37,15 @@ const HomeHero = props => {
               <p className="invisible-space">.</p>
               <span className="invisible-space">.</span>
             </Subtitle>
-            <Button isColor="white" isOutlined>
-              <Link to="/serveis">
-                DESCOBREIX QUE PODEM FER PER TU
-                {/* <FAChevronRight
-                  height="1.25em"
-                  width="1.25em"
-                  className="my-icon-container"
-                /> */}
-              </Link>
-            </Button>
+            <Link to={props.heroCTALink}>
+              <Button
+                isColor="white"
+                isOutlined
+                className="homeHero-cta-button"
+              >
+                {props.heroCTAText}
+              </Button>
+            </Link>
           </Container>
         </HeroBody>
         <p className="has-text-centered add-bottom-margin has-text-primary">

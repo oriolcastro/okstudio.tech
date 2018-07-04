@@ -21,6 +21,7 @@ const CTABanner = props => {
   )
   // eslint-disable-next-line
   CTABanner.propTypes = {
+    backgroundColor: propTypes.string,
     content: propTypes.string,
     buttonText: propTypes.string,
     buttonLink: propTypes.string,
