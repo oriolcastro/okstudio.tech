@@ -15,11 +15,11 @@ const HomeHero = props => {
               {props.title}
             </Title>
             <Subtitle isSize="3" className="homeHero-subtitle">
-              {/* <Typing
+              <Typing
                 speed={100}
                 cursorClassName="home-hero-cursor"
                 loop={true}
-                >
+              >
                 <span>Una web moderna</span>
                 <Typing.Backspace count={15} delay={500} speed={50} />
                 <Typing.Speed ms={100} />
@@ -33,7 +33,7 @@ const HomeHero = props => {
                 <Typing.Backspace count={23} delay={500} speed={50} />
                 <Typing.Speed ms={100} />
                 <span>Assesorament personalitzat</span>
-              </Typing> */}
+              </Typing>
               <p className="invisible-space">.</p>
               <span className="invisible-space">.</span>
             </Subtitle>
