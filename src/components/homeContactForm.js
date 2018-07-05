@@ -20,14 +20,14 @@ const HomeContactForm = props => (
   <Section>
     <Container>
       <Columns>
-        <Column>
+        <Column style={{ display: 'flex', flexDirection: 'column' }}>
           <Title>Contacta amb nosaltres</Title>
           <Subtitle>
             Estem aquí per ajudar-te! Pots trobar-nos a través del formulari o
             al correu electrònic{' '}
             <a href="mailto:hola@okstudio.tech">hola@okstudio.tech</a>
           </Subtitle>
-          <p className="privacyInfo">{props.privacyInfo}</p>
+          <p className="privacyInfo is-hidden-mobile">{props.privacyInfo}</p>
         </Column>
         <Column isSize="2/3">
           <form
@@ -39,7 +39,7 @@ const HomeContactForm = props => (
             <Field>
               <Label>Nom i cognoms</Label>
               <Control>
-                <Input type="text" name="name" placeholder="Jack Sparrow" />
+                <Input type="text" name="name" placeholder="Hari Seldon" />
               </Control>
             </Field>
             <p className="is-hidden">
@@ -50,7 +50,11 @@ const HomeContactForm = props => (
             <Field>
               <Label>Correu electrònic</Label>
               <Control>
-                <Input type="email" name="email" placeholder="@" />
+                <Input
+                  type="email"
+                  name="email"
+                  placeholder="hari@foundation.ia"
+                />
               </Control>
             </Field>
             <Field>
@@ -77,6 +81,12 @@ const HomeContactForm = props => (
               </Control>
             </Field>
           </form>
+          <p
+            className="privacyInfo is-hidden-desktop is-hidden-tablet"
+            style={{ marginTop: '2rem' }}
+          >
+            {props.privacyInfo}
+          </p>
         </Column>
       </Columns>
     </Container>

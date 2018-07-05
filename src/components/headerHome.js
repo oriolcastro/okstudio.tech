@@ -81,7 +81,7 @@ class HeaderHome extends Component {
               </NavbarItem>
             </Link>
           </NavbarStart>
-          <NavbarEnd isHidden="mobile">
+          <NavbarEnd isHidden="mobile tablet">
             <NavbarItem>
               <Link to="/contacte">
                 <Button className="btn-header">

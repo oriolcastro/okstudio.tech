@@ -19,11 +19,14 @@ const HomeFeaturedProject = props => {
           <Column isSize={6} isOffset={1}>
             <Title>{props.title}</Title>
             <Content>
-              <p>{props.description}</p>
+              <div
+                className="has-text-justified"
+                dangerouslySetInnerHTML={{ __html: props.description }}
+              />
               <Link to={props.link}>Coneix el projecte ></Link>
             </Content>
             <Link to="/projectes">
-              <Button isColor="primary">Projectes</Button>
+              <Button isColor="primary">Últims projectes</Button>
             </Link>
           </Column>
           <Column isSize={{ desktop: 4, mobile: 12 }} isOffset={{ desktop: 1 }}>

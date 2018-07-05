@@ -41,7 +41,7 @@ const ContactePage = ({ data }) => (
               <Field>
                 <Label>Nom i cognoms</Label>
                 <Control>
-                  <Input type="text" name="name" placeholder="Jack Sparrow" />
+                  <Input type="text" name="name" placeholder="Hari Seldon" />
                 </Control>
               </Field>
               <p className="is-hidden">
@@ -53,7 +53,11 @@ const ContactePage = ({ data }) => (
               <Field>
                 <Label>Correu electrònic</Label>
                 <Control>
-                  <Input type="email" name="email" placeholder="@" />
+                  <Input
+                    type="email"
+                    name="email"
+                    placeholder="hari@foundation.ia"
+                  />
                 </Control>
               </Field>
               <Field>

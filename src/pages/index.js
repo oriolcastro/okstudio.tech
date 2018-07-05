@@ -17,7 +17,7 @@ const IndexPage = ({ data }) => (
       title={data.contentfulHomePage.featuredProjectTitle}
       description={
         data.contentfulHomePage.featuredProjectDescription.childMarkdownRemark
-          .rawMarkdownBody
+          .html
       }
       link={data.contentfulHomePage.featuredProjectLink}
       image={data.contentfulHomePage.featuredProjectImage.fluid}
@@ -47,7 +47,7 @@ export const query = graphql`
       featuredProjectTitle
       featuredProjectDescription {
         childMarkdownRemark {
-          rawMarkdownBody
+          html
         }
       }
       featuredProjectLink
