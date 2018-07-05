@@ -9,7 +9,30 @@ $green-okstudio: #44AF69;
 $red-okstudio: #FB3640;
 $yellow-okstudio: #F7B538;
 $purple-okstudio: #3D315B;
-$family-serif: "Open Sans", "Segoe UI", Arial, sans-serif;
+
+// Custom font
+@font-face
+  font-family: 'PT Sans'
+  src: url('./PTSans_400.woff2')
+  font-weight: normal
+  font-style: normal
+@font-face
+  font-family: 'PT Sans Narrow'
+  src: url('./PTSansNarrow_400.woff2')
+  font-weight: normal
+  font-style: normal
+@font-face
+  font-family: "Roboto"
+  src: url('./Roboto_400.woff2')
+  font-weight: normal
+  font-style: normal
+@font-face
+  font-family: "Roboto Condensed"
+  src: url('./RobotoCondensed_400.woff2')
+  font-weight: normal
+  font-style: normal
+
+$family-okstudio: "Roboto", "Open Sans", Arial, sans-serif;
 
 //Set derived variables
 $primary: $okstudio;
@@ -23,7 +46,7 @@ $warning-invert: findColorInvert($warning);
 $info: $purple-okstudio;
 $info-invert: findColorInvert($info);
 
-$family-primary: $family-serif
+$family-primary: $family-okstudio
 
 //Customize Bulma variables
 $navbar-item-color: white;
