@@ -10,18 +10,50 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
     'gatsby-transformer-remark',
-    `gatsby-plugin-sharp`,
-    'gatsby-plugin-react-next',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     'gatsby-plugin-catch-links',
     {
       resolve: `gatsby-plugin-sitemap`,
     },
     {
-      resolve: `gatsby-source-datocms`,
+      resolve: `gatsby-plugin-google-analytics`,
       options: {
-        apiToken: process.env.MY_READONLY_DATOCMS_API_TOKEN || '',
-        previewMode: true,
-        disableLiveReload: true,
+        trackingId: process.env.MY_GOOGLE_ANALYTICS_ID || '',
+        // Puts tracking script in the head instead of the body
+        head: false,
+        // Setting this parameter is optional
+        anonymize: true,
+        // Setting this parameter is also optional
+        respectDNT: true,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images-contentful`,
+            options: {
+              maxWidth: 700,
+              linkImagesToOriginal: false,
+            },
+          },
+          {
+            resolve: 'gatsby-remark-external-links',
+            options: {
+              target: '_blank',
+              rel: 'nofollow noopener noreferrer',
+            },
+          },
+        ],
+      },
+    },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: process.env.MY_CONTENTFUL_SPACE_ID || '',
+        accessToken: process.env.MY_CONTENTFUL_ACCES_TOKEN || '',
       },
     },
     {

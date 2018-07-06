@@ -1,18 +1,16 @@
 import React from 'react'
 import propTypes from 'prop-types'
 
-import Img from 'gatsby-image'
-
 import { Title, Subtitle, Hero, HeroBody, Container } from 'bloomer'
 
 const PageHero = props => {
   return (
     <div>
-      <Hero isColor="primary" isSize="medium" className="page-hero">
+      <Hero isSize="medium" className="page-hero">
         <HeroBody>
           <Container>
-            <Title>{props.title}</Title>
-            <Subtitle>{props.subtitle}</Subtitle>
+            <Title isSize="1">{props.title}</Title>
+            <Subtitle isSize="4">{props.subtitle}</Subtitle>
           </Container>
         </HeroBody>
       </Hero>

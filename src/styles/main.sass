@@ -1,0 +1,285 @@
+@import "./theme.sass"
+
+@import "~bulma"
+
+//Main custom CSS
+.my-site
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+//Add padding in the layout that uses fixed navbar
+.main-layout
+  padding-top: 72px
+.home-content
+  flex: 1;
+  margin-top: -88px
+h1, h2, h3, h4,
+  font-family: "Roboto Condensed", Arial, sans-serif
+
+////ADDED HELPERS
+//Align the image in Img component at the center of its parent
+.image-is-centered
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  justify-content: center
+  align-items: center
+//Makes the element the same height as the parrent so diferent components have the same heigh
+.is-full-height
+  height: 100%
+//Adds small bottom margin to elements that don't have by default to separete from the next in the tree
+.add-bottom-margin
+  margin-bottom: 12px
+//Add margin to the icons from react-icons
+.my-icon-container
+  margin: 0px 8px
+.image-has-shadow
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+// Makes a span transaprent to add invisible space
+.invisible-space
+  color: transparent
+
+//// CSS FOR DIFERENT ELEMENTS OF THE SITE
+//Customize header Section
+.main-navbar
+    background-color: $primary
+    padding: 0px 24px
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+    @media screen and (max-width: 1087px)
+      background-color: $primary
+      padding-left: 0
+      padding-right: 0
+.home-navbar
+  background-color: transparent
+  padding-top: 12px
+  margin: 0px 24px
+  @include mobile
+    margin: 0
+    padding-top: 0
+  @include tablet-only
+    margin: 0
+    padding-top: 0
+.navbar-menu
+  @include touch
+    background-color: $light
+    position: absolute
+    width: 100%
+    .menu-item
+      color: $grey-darker
+.navbar-start
+  @media screen and (min-width: 1088px)
+    margin-left: auto
+    margin-right: 0
+.navbar-end
+  @media screen and (min-width: 1088px)
+    margin: 0
+.navbar-burger
+  color: white
+.menu-item
+  font-size: 1.25rem
+  font-weight: bolder
+  line-height: 2.75
+  text-transform: uppercase
+  &:hover
+    color: $grey-lighter
+.btn-header
+  text-transform: uppercase
+  font-size: 1rem
+  font-weight: bold
+  background-color: $white
+  color: $primary
+
+
+//Hero section on pages and home
+.page-hero
+  h1
+    white-space: pre-wrap
+.home-hero
+  background-color: #fff !important
+  @include fullhd
+    background-image: url(../img/HomeHero_fullhd.png)
+    background-size: cover
+  @include widescreen-only
+    background-image: url(../img/HomeHero_widescreen.png)
+    background-size: cover
+  @include desktop-only
+    background-image: url(../img/HomeHero_desktop.png)
+    background-size: cover
+  @include tablet-only
+    background-image: url(../img/HomeHero_tablet.png)
+    background-size: cover
+    .hero-body
+      padding-top: 14rem !important
+      padding-bottom: 14rem !important
+  @include mobile
+    background-image: url(../img/HomeHero_mobile.png)
+    background-size: cover
+    .hero-body
+      padding-top: 5rem !important
+      padding-bottom: 5rem !important
+    .homeHero-cta-button
+      font-size: 0.9rem
+      width: 100%
+  @media screen and (max-width: 1087px)
+    padding-top: 58px
+  h1
+    white-space: pre-wrap
+    width: 60%
+    @include mobile
+      width: 100%
+.homeHero_cursor
+  color: white !important
+.homeHero_animatedText
+  display: inline
+
+
+//Service component
+.add-padding-lat
+  padding: 0px 12px
+.serveis_cta-container
+  padding: 12px
+.button-wrapper
+  display: inline-flex
+  margin: 8px
+.service
+  margin-bottom: 48px
+
+
+//Hero section for single-project and single-blog pages
+.single-hero
+  position: relative
+  z-index: 1
+  @include mobile
+    height: auto
+    background-color: $primary
+.single-hero__text
+  position: absolute
+  width: 100%
+  z-index: 50
+  bottom: 0
+  padding: 24px
+  margin: 0 48px
+  @include mobile
+    margin: 0
+    position: relative
+  h1
+    color: $white
+  h2
+    color: $white
+
+
+//Masonry in the projects page
+.projects-grid
+  display: flex
+  margin-left: -30px
+  width: auto
+.projects-grid_column
+  padding-left: 30px
+  background-clip: padding-box
+.projectsgrid_element-container
+  position: relative
+  z-index: 1
+  overflow: hidden
+  margin-bottom: 30px
+  &:hover
+    .projectsgrid_element-text
+      bottom: 35%
+      background-color: rgba(54,54,54,0.9)
+    .projectsgrid_element-icon
+      opacity: 1
+.projectsgrid_overlay
+  max-width: 400px
+  max-height: 400px
+.projectsgrid_element-text
+  transition: all 0.5s ease-in-out
+  position: absolute
+  z-index: 50
+  bottom: 0
+  background-color: rgba(54,54,54,0.6)
+  padding: 12px
+  width: 100%
+  h1
+    text-align: center
+    transition: all 0.5s ease-in-out
+    color: $white
+  h2
+    transition: all 0.5s ease-in-out
+    color: $white
+.projectsgrid_element-icon
+  display: inline
+  position: absolute
+  bottom: 1rem
+  right: 0
+  margin: 24px
+  font-size: 24px
+  color: $white
+  opacity: 0
+  transition: all 0.5s ease-in-out
+
+
+//CTA Banner
+.cta-banner
+  background-color: $primary
+  background-image: linear-gradient(141deg, #0088cc 0%, #007FFF 71%, #1a66ff 100%)
+  padding: 48px 24px
+  h1
+    color: $primary-invert
+    text-align: center
+  .cta-button
+    text-align: center
+
+
+//Client opinion banner
+.client-opinion-banner
+  background-color: $success
+  p, h1,h5, h6
+    color: $success-invert
+
+
+//Contact page
+.privacyContainer
+  margin-top: 48px
+.privacyInfo
+  white-space: pre-line
+  font-size: 0.8rem
+  margin-top: auto
+
+
+//Method page
+.principle-text
+  @include desktop
+    p
+      margin: 0 6rem
+.principle-image
+  margin: 1rem
+  @include mobile
+    margin: 0
+
+
+//Single Project page elements
+.client-logo
+  padding: 24px
+.client-description
+  @include desktop
+    p
+      margin: 0 6rem
+      padding-top: 24px
+//Footer
+.footer
+  padding-bottom: 48px
+  background-color: $light
+  .title
+    margin-bottom: 8px
+  a
+    color: $grey-dark
+  .adress-container p
+    margin-bottom: 0
+  .logotype
+    padding-right: 48px
+.copyright-wrap
+  padding: 12px 24px
+  background-color: $grey-dark
+  color: findColorInvert($grey-dark)
+  a
+    color: findColorInvert($grey-dark)
+    text-align: right

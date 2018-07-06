@@ -12,9 +12,9 @@ import {
   Button,
 } from 'bloomer'
 
-import logotype from '../img/logotype_header.png'
+import logo from '../img/brand.png'
 
-class Header extends Component {
+class HeaderHome extends Component {
   constructor(props) {
     super(props)
     this.state = { navOpen: false }
@@ -40,13 +40,14 @@ class Header extends Component {
   }
   render() {
     return (
-      <Navbar className={'main-navbar is-transparent is-fixed-top'}>
+      <Navbar className={'home-navbar'}>
         <NavbarBrand>
           <Link to="/">
             <NavbarItem onClick={this.closeNav}>
-              <img alt="" src={logotype} />
+              <img alt="" src={logo} />
             </NavbarItem>
           </Link>
+
           <NavbarBurger
             isActive={this.state.navOpen}
             onClick={this.onClickNav}
@@ -95,4 +96,4 @@ class Header extends Component {
   }
 }
 
-export default Header
+export default HeaderHome
