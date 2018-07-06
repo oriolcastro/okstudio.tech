@@ -17,11 +17,6 @@ const SuccessPage = () => (
         <Title className="has-text-centered">
           <Link to="/">Continua navegant per la pàgina</Link>{' '}
         </Title>
-        <form name="test" method="post" data-netlify="true">
-          <input type="text" name="name" />
-          <input type="email" name="email" />
-          <button type="submit">send</button>
-        </form>
       </Container>
     </Section>
   </Layout>
