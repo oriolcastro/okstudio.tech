@@ -4,6 +4,7 @@ import { Footer, Container, Content, Columns, Column, Title } from 'bloomer'
 import FaTwitter from 'react-icons/lib/fa/twitter-square'
 import FaInstagram from 'react-icons/lib/fa/instagram'
 import FaGithub from 'react-icons/lib/fa/github-square'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 import logotype from '../img/logotype_footer.png'
 const AppFooter = () => (
@@ -69,7 +70,7 @@ const AppFooter = () => (
             <Column className="is-3-desktop is-6-tablet is-12-mobile">
               <Title isSize="5">Xarxes</Title>
               <div>
-                <a
+                <OutboundLink
                   href="https://twitter.com/_okstudio"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -77,8 +78,8 @@ const AppFooter = () => (
                   <span className="my-icon-container">
                     <FaTwitter size={32} />
                   </span>
-                </a>
-                <a
+                </OutboundLink>
+                <OutboundLink
                   href="https://www.instagram.com/_okstudio/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -86,8 +87,8 @@ const AppFooter = () => (
                   <span className="my-icon-container">
                     <FaInstagram size={32} />
                   </span>
-                </a>
-                <a
+                </OutboundLink>
+                <OutboundLink
                   href="https://github.com/oriolcastro"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -95,7 +96,7 @@ const AppFooter = () => (
                   <span className="my-icon-container">
                     <FaGithub size={32} />
                   </span>
-                </a>
+                </OutboundLink>
               </div>
             </Column>
           </Columns>

@@ -2,6 +2,7 @@ import React from 'react'
 import Img from 'gatsby-image'
 import { graphql } from 'gatsby'
 import FaExtLink from 'react-icons/lib/fa/external-link'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 import {
   Section,
@@ -97,20 +98,20 @@ const SingleProject = ({ data }) => {
             />
           </Content>
           <p className="has-text-centered add-bottom-margin">
-            <Button
+            <OutboundLink
               href={data.contentfulProject.projectLink}
               target="_blank"
               rel="noopener noreferrer"
-              isColor="primary"
-              isOutlined
             >
-              <FaExtLink
-                height="1.5em"
-                width="1.5em"
-                className="my-icon-container"
-              />
-              {data.contentfulProject.title}
-            </Button>
+              <Button isColor="primary" isOutlined>
+                <FaExtLink
+                  height="1.5em"
+                  width="1.5em"
+                  className="my-icon-container"
+                />
+                {data.contentfulProject.title}
+              </Button>
+            </OutboundLink>
           </p>
           <Columns isMultiline>
             {data.contentfulProject.resultImg.map(image => (
