@@ -15,26 +15,27 @@ const HomeHero = props => {
               {props.title}
             </Title>
             <Subtitle isSize="4" className="homeHero-subtitle">
-              <span>Ens mou...</span>
+              <span>Ens mou </span>
               <Typing
                 speed={100}
-                cursorClassName="home-hero-cursor"
+                cursorClassName="homeHero_cursor"
                 loop={true}
+                className="homeHero_animatedText"
               >
-                <span>Crear webs modernes</span>
+                <span>crear webs modernes</span>
                 <Typing.Backspace count={19} delay={500} speed={50} />
                 <Typing.Speed ms={100} />
-                <span>Aprofitar les possibilitats del núvol</span>
+                <span>aprofitar les possibilitats del núvol</span>
                 <Typing.Backspace count={38} delay={500} speed={50} />
                 <Typing.Speed ms={100} />
-                <span>Desenvolupar aplicacions web mòbil</span>
+                <span>desenvolupar aplicacions web mòbil</span>
                 <Typing.Backspace count={34} delay={500} speed={50} />
                 <Typing.Speed ms={100} />
-                <span>Oferir millors eines de gestió</span>
-                <Typing.Backspace count={30} delay={500} speed={50} />
+                <span>implementar millors eines de gestió</span>
+                <Typing.Backspace count={35} delay={500} speed={50} />
                 <Typing.Speed ms={100} />
-                <span>Assessorar sobre la seva implementació</span>
-                <Typing.Backspace count={38} delay={500} speed={50} />
+                <span>oferir assessorament personalitzat</span>
+                <Typing.Backspace count={34} delay={500} speed={50} />
                 <Typing.Delay ms={1000} />
               </Typing>
               <p className="invisible-space">.</p>
