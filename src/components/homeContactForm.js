@@ -32,7 +32,7 @@ const HomeContactForm = props => (
         <Column isSize="2/3">
           <form
             name="homePage"
-            method="POST"
+            method="post"
             netlify-honeypot="bot-field"
             data-netlify="true"
             action="/success"

@@ -34,7 +34,7 @@ const ContactePage = ({ data }) => (
           <Column isSize={6} isOffset={1}>
             <form
               name="contactPage"
-              method="POST"
+              method="post"
               netlify-honeypot="bot-field"
               data-netlify="true"
               action="/success"
