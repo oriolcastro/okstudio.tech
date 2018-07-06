@@ -13,7 +13,7 @@
 .home-content
   flex: 1;
   margin-top: -88px
-h1, h2, h3, h4, h5, h6
+h1, h2, h3, h4,
   font-family: "Roboto Condensed", Arial, sans-serif
 
 ////ADDED HELPERS
@@ -52,15 +52,20 @@ h1, h2, h3, h4, h5, h6
 .home-navbar
   background-color: transparent
   padding-top: 12px
-  @media screen and (max-width: 1087px)
+  margin: 0px 24px
+  @include mobile
+    margin: 0
+    padding-top: 0
+  @include tablet-only
+    margin: 0
     padding-top: 0
 .navbar-menu
-  @media screen and (max-width: 1087px)
-      background-color: $light
-      position: absolute
-      width: 100%
-      .menu-item
-        color: $grey-darker
+  @include touch
+    background-color: $light
+    position: absolute
+    width: 100%
+    .menu-item
+      color: $grey-darker
 .navbar-start
   @media screen and (min-width: 1088px)
     margin-left: auto
@@ -89,7 +94,6 @@ h1, h2, h3, h4, h5, h6
 .page-hero
   h1
     white-space: pre-wrap
-
 .home-hero
   background-color: #fff !important
   @include fullhd
@@ -125,6 +129,7 @@ h1, h2, h3, h4, h5, h6
       width: 100%
 .home-hero-cursor
   color: white !important
+
 
 //Service component
 .add-padding-lat
@@ -169,7 +174,6 @@ h1, h2, h3, h4, h5, h6
 .projects-grid_column
   padding-left: 30px
   background-clip: padding-box
-
 .projectsgrid_element-container
   position: relative
   z-index: 1
@@ -199,7 +203,6 @@ h1, h2, h3, h4, h5, h6
   h2
     transition: all 0.5s ease-in-out
     color: $white
-
 .projectsgrid_element-icon
   display: inline
   position: absolute
