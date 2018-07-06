@@ -35,6 +35,7 @@ const HomeContactForm = props => (
             method="POST"
             netlify-honeypot="bot-field"
             data-netlify="true"
+            action="/success"
           >
             <Field>
               <Label>Nom i cognoms</Label>
