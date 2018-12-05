@@ -4,6 +4,7 @@ import Helmet from 'react-helmet'
 import AppFooter from '../components/footer'
 import Copyright from '../components/copyright'
 
+import '../styles/main.sass'
 import Config from '../../meta/config'
 
 const LandingLayout = ({ children }) => (
