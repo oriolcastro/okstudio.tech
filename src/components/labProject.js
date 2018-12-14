@@ -45,7 +45,7 @@ const LabProject = props => (
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Button isColor="primary" style={{ marginRight: 28 }}>
+        <Button isColor="primary" style={{ margin: 12 }}>
           <FaExtLink
             height="1.5em"
             width="1.5em"
@@ -59,7 +59,7 @@ const LabProject = props => (
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Button isColor="dark">
+        <Button isColor="dark" style={{ margin: 12 }}>
           <FaGithub
             height="1.5em"
             width="1.5em"
