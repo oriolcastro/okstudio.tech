@@ -31,7 +31,7 @@ const LabHero = props => {
           <Columns isVCentered>
             <Column>
               <Title hasTextColor="white">Benvinguts al LAB d'OK Studio</Title>
-              <Subtitle hasTextColor="white">
+              <Subtitle hasTextColor="white" style={{textAlign='justify'}}>
                 Aquest és un espai per recollir tots aquells projectes que hem
                 dut a terme per experimentar amb noves tecnologies web i
                 millorar-ne el coneixement abans d'aplicar-les als projectes
