@@ -11,7 +11,6 @@ import {
   Column,
 } from 'bloomer'
 import { Link } from 'gatsby'
-import Img from 'gatsby-image'
 import logotype from '../img/logotype_header.png'
 
 const LabHero = props => {
@@ -31,7 +30,7 @@ const LabHero = props => {
           <Columns isVCentered>
             <Column>
               <Title hasTextColor="white">Benvinguts al LAB d'OK Studio</Title>
-              <Subtitle hasTextColor="white" style={{textAlign='justify'}}>
+              <Subtitle hasTextColor="white" className="has-text-justified">
                 Aquest és un espai per recollir tots aquells projectes que hem
                 dut a terme per experimentar amb noves tecnologies web i
                 millorar-ne el coneixement abans d'aplicar-les als projectes

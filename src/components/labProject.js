@@ -5,15 +5,7 @@ import FaGithub from 'react-icons/lib/fa/github'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 import Img from 'gatsby-image'
-import {
-  Button,
-  Title,
-  Container,
-  Subtitle,
-  Content,
-  Columns,
-  Column,
-} from 'bloomer'
+import { Button, Title, Container, Content, Columns, Column } from 'bloomer'
 
 const LabProject = props => (
   <Container style={{ marginBottom: 48 }}>
