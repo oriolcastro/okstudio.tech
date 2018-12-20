@@ -5,7 +5,15 @@ import FaGithub from 'react-icons/lib/fa/github'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 import Img from 'gatsby-image'
-import { Button, Title, Container, Content, Columns, Column } from 'bloomer'
+import {
+  Button,
+  Title,
+  Container,
+  Content,
+  Columns,
+  Column,
+  Subtitle,
+} from 'bloomer'
 
 const LabProject = props => (
   <Container style={{ marginBottom: 48 }}>
@@ -32,10 +40,13 @@ const LabProject = props => (
         />
       </Column>
     </Columns>
-    <Columns isVCentered isCentered>
+    <Columns isVCentered isCentered isMultiline>
       {props.gallery.map((image, id) => (
-        <Column size={1 / 3}>
+        <Column isSize="1/2">
           <Img fluid={image.fluid} key={id} />
+          <Content hasTextAlign="centered">
+            <Subtitle tag="h4">{image.description}</Subtitle>
+          </Content>
         </Column>
       ))}
     </Columns>
@@ -49,7 +60,7 @@ const LabProject = props => (
           <FaExtLink
             height="1.5em"
             width="1.5em"
-            className="my-icon-container"
+            style={{ marginRight: '8px' }}
           />
           Accedeix al projecte
         </Button>
@@ -63,7 +74,7 @@ const LabProject = props => (
           <FaGithub
             height="1.5em"
             width="1.5em"
-            className="my-icon-container"
+            style={{ marginRight: '8px' }}
           />
           Consulta el codi
         </Button>
