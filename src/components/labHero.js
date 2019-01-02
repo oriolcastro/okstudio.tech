@@ -31,10 +31,10 @@ const LabHero = props => {
             <Column>
               <Title hasTextColor="white">Benvinguts al LAB d'OK Studio</Title>
               <Subtitle hasTextColor="white" className="has-text-justified">
-                Aquest és un espai per recollir tots aquells projectes que hem
-                dut a terme per experimentar amb noves tecnologies web i
-                millorar-ne el coneixement abans d'aplicar-les als projectes
-                dels nostres clients.
+                En aquest espai recollirem tots els projectes duts a terme com a
+                forma d'experimentació i aprenentatge. Abans d'utilitzar noves
+                tecnologies web amb els nostres clients sempre les posem a prova
+                en diferents PoC (Proff of Concept)
               </Subtitle>
             </Column>
             <Column hasTextAlign="centered" isOffset={1}>

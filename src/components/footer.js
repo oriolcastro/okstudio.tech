@@ -7,6 +7,7 @@ import FaGithub from 'react-icons/lib/fa/github-square'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 import logotype from '../img/logotype_footer.png'
+import Lab from '../pages/lab'
 const AppFooter = () => (
   <div>
     <Footer id="footer">
@@ -51,6 +52,9 @@ const AppFooter = () => (
             </Column>
             <Column className="is-3-desktop is-6-tablet">
               <Title isSize="5">Projectes</Title>
+              <Link to="/aplicacio-festa-major-vilanova">
+                <p>Aplicació Festa Major Vng 2018</p>
+              </Link>
               <Link to="/esplaiadapp-2018">
                 <p>Esplaiadapp '18</p>
               </Link>
@@ -60,9 +64,18 @@ const AppFooter = () => (
               <Link to="/ecologia-politica">
                 <p>Web Ecologia Política</p>
               </Link>
-              {/* <Title isSize="5">
-                <Link to="/blog">Blog</Link>
-              </Title> */}
+              <Title isSize="5">
+                <Link to="/lab">LAB - Espai d'experimentació</Link>
+              </Title>
+              <Title isSize="5">
+                <OutboundLink
+                  href="https://oriolcastro.me/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Blog
+                </OutboundLink>
+              </Title>
               <Title isSize="5">
                 <Link to="/contacte">Contacte</Link>
               </Title>
