@@ -88,6 +88,19 @@ const CreditsPage = () => (
               </a>
             </li>
           </ul>
+          <Title isSize="4">Il·lustracions</Title>
+          <ul>
+            <li>
+              Capçalera LAB by{' '}
+              <a
+                href="https://www.humaaans.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Humaaans
+              </a>
+            </li>
+          </ul>
           <Title isSize="4">Imatges</Title>
           <ul>
             <li>

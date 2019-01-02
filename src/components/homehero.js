@@ -1,7 +1,6 @@
 import React from 'react'
 import Typing from 'react-typing-animation'
 import { Link } from 'gatsby'
-import FAChevronRight from 'react-icons/lib/fa/chevron-right'
 import FAChevronDown from 'react-icons/lib/fa/chevron-down'
 import { Title, Subtitle, Hero, HeroBody, Container, Button } from 'bloomer'
 
